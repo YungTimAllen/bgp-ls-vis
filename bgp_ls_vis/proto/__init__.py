@@ -80,7 +80,7 @@ class GoBGPQueryWrapper:
             paths_nlri = dict(best_path["nlri"]["nlri"])
             paths_pattrs = [dict(pattr) for pattr in best_path["pattrs"]]
 
-            paths_pattr_LSAttr = [
+            paths_pattr_lsattr = [
                 attr
                 for attr in paths_pattrs
                 if attr["@type"] == "type.googleapis.com/gobgpapi.LsAttribute"
@@ -94,9 +94,9 @@ class GoBGPQueryWrapper:
                         "remoteNode": paths_nlri["remoteNode"],
                         "linkDescriptor": paths_nlri["linkDescriptor"],
                         "lsattribute": {
-                            "node": paths_pattr_LSAttr["node"],
-                            "link": paths_pattr_LSAttr["link"],
-                            "prefix": paths_pattr_LSAttr["prefix"],
+                            "node": paths_pattr_lsattr["node"],
+                            "link": paths_pattr_lsattr["link"],
+                            "prefix": paths_pattr_lsattr["prefix"],
                         },
                     }
                 )
