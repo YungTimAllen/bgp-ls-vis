@@ -55,6 +55,10 @@ class GoBGPQueryWrapper:
         rtn = [MessageToDict(nlri) for nlri in response]
         return rtn
 
+    def debug(self):
+        """x"""
+        return self.__get_bgp_ls_lsdb()
+
     def get_lsdb(self) -> list:
         """Public method to get a version of the BGP-LS LSDB thats more concise
 
@@ -71,23 +75,44 @@ class GoBGPQueryWrapper:
 
         for lsa in brib:
 
-            nlri = dict(lsa["destination"]["paths"][0]["nlri"]["nlri"])
+            best_path = [p for p in lsa["destination"]["paths"] if p["best"]][0]
 
-            if nlri["@type"] == "type.googleapis.com/gobgpapi.LsLinkNLRI":
+            paths_nlri = dict(best_path["nlri"]["nlri"])
+            paths_pattrs = [dict(pattr) for pattr in best_path["pattrs"]]
+
+            paths_pattr_lsattr = [
+                attr
+                for attr in paths_pattrs
+                if attr["@type"] == "type.googleapis.com/gobgpapi.LsAttribute"
+            ][0]
+
+            if paths_nlri["@type"] == "type.googleapis.com/gobgpapi.LsLinkNLRI":
                 filtered_lsdb.append(
                     {
                         "type": "Link",
-                        "localNode": nlri["localNode"],
-                        "remoteNode": nlri["remoteNode"],
-                        "linkDescriptor": nlri["linkDescriptor"],
+                        "localNode": paths_nlri["localNode"],
+                        "remoteNode": paths_nlri["remoteNode"],
+                        "linkDescriptor": paths_nlri["linkDescriptor"],
+                        "lsattribute": {
+                            "node": paths_pattr_lsattr["node"],
+                            "link": paths_pattr_lsattr["link"],
+                            "prefix": paths_pattr_lsattr["prefix"],
+                        },
                     }
                 )
-            elif nlri["@type"] == "type.googleapis.com/gobgpapi.LsPrefixV4NLRI":
+            elif paths_nlri["@type"] == "type.googleapis.com/gobgpapi.LsPrefixV4NLRI":
                 filtered_lsdb.append(
                     {
                         "type": "Prefix",
-                        "localNode": nlri["localNode"],
-                        "prefixDescriptor": nlri["prefixDescriptor"],
+                        "localNode": paths_nlri["localNode"],
+                        "prefixDescriptor": paths_nlri["prefixDescriptor"],
+                    }
+                )
+            elif paths_nlri["@type"] == "type.googleapis.com/gobgpapi.LsNodeNLRI":
+                filtered_lsdb.append(
+                    {
+                        "type": "Node",
+                        "localNode": paths_nlri["localNode"],
                     }
                 )
 
