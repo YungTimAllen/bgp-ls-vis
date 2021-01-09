@@ -1,0 +1,48 @@
+---
+Config:
+  Loopback_Prefix: "2.90.0."
+Nodes:
+- ID: 1
+  Interfaces:
+  - Name: Gi0/0
+    Attaches_ID: 2
+  - Name: Gi1/0
+    Attaches_ID: 3
+- ID: 2
+  Interfaces:
+  - Name: Gi1
+    Attaches_ID: 1
+  - Name: Gi2
+    Attaches_ID: 4
+  - Name: Gi3
+    Attaches_ID: 5
+- ID: 3
+  Interfaces:
+  - Name: Gi0/0
+    Attaches_ID: 1
+  - Name: Gi1/0
+    Attaches_ID: 4
+  - Name: Gi2/0
+    Attaches_ID: 5
+- ID: 4
+  Interfaces:
+  - Name: Gi0/0
+    Attaches_ID: 2
+  - Name: Gi1/0
+    Attaches_ID: 3
+  - Name: Gi2/0
+    Attaches_ID: 6
+- ID: 5
+  Interfaces:
+  - Name: Gi0/0
+    Attaches_ID: 3
+  - Name: Gi1/0
+    Attaches_ID: 2
+  - Name: Gi2/0
+    Attaches_ID: 6
+- ID: 6
+  Interfaces:
+  - Name: Gi0/0
+    Attaches_ID: 4
+  - Name: Gi1/0
+    Attaches_ID: 5
