@@ -28,8 +28,8 @@ To get pygraphviz working ...
 * [GoBGP](https://github.com/osrg/gobgp)
 * [gRPCio](https://pypi.org/project/grpcio/)
 
-You will need to prepare your own gRPC python interfaces. This process is described in the GoBGP guide on [interfacing 
-from your favourite language](https://github.com/osrg/gobgp/blob/master/docs/sources/grpc-client.md#python).
+You may need to prepare your own gRPC python interfaces if ours dont work. This process is described in the GoBGP guide 
+on [interfacing from your favourite language](https://github.com/osrg/gobgp/blob/master/docs/sources/grpc-client.md#python).
 
 ```buildoutcfg
     - https://www.grpc.io/docs/languages/python/quickstart/
