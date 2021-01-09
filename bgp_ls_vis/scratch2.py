@@ -1,4 +1,5 @@
 """PoC Script for this project, super-alpha code~"""
+import yaml
 from proto import GoBGPQueryWrapper
 
 # Graphing tools
@@ -12,7 +13,12 @@ def main():
     lsdb = rpc.get_lsdb()
     graph = graphing.build_nx_from_lsdb(lsdb)
 
-    graphing.draw_graph(graph)
+    print(yaml.dump(lsdb))
+
+    # Only works on Linux, pita to get working on Windows
+    # graphing.draw_graphviz_graph(graph, "multi.png")
+
+    graphing.draw_pyplot_graph(graph)
 
 
 if __name__ == "__main__":

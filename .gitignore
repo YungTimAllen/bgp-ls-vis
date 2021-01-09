@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Graphviz testing file
+bgp_ls_vis/multi.png
