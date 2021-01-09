@@ -1,4 +1,5 @@
 """PoC Script for this project, super-alpha code~"""
+import yaml
 from proto import GoBGPQueryWrapper
 
 # Graphing tools
@@ -9,11 +10,18 @@ import matplotlib.pyplot as plt
 def main():
     """First method called when ran as script"""
     rpc = GoBGPQueryWrapper("172.20.10.2", "50051")
-    lsdb = rpc.get_lsdb()
 
+    lsdb = rpc.get_lsdb()
     graph = build_nx_from_lsdb(lsdb)
 
-    draw_graph(graph)
+    print(yaml.dump(lsdb))
+
+    #debug_lsdb = rpc.debug()
+
+    #for nlri in debug_lsdb:
+    #    print(nlri["destination"]["paths"])
+
+    # draw_graph(graph)
 
 
 def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
