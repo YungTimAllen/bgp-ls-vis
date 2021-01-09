@@ -11,15 +11,25 @@ from . import attribute_pb2
 
 
 class GoBGPQueryWrapper:
-    """x"""
+    """Class to add abstraction for RPC calls to a GoBGP Instance"""
 
     def __init__(self, target_ipv4_address, target_rpc_port):
+        """Constructor initialises RPC session
+
+        Args:
+            target_ipv4_address: Management IPv4 Address of GoBGP instance
+            target_rpc_port: Management Port of GoBGP Instance
+        """
         channel = grpc.insecure_channel(f"{target_ipv4_address}:{target_rpc_port}")
         self.stub = gobgp_pb2_grpc.GobgpApiStub(channel)
 
     @staticmethod
     def __build_rpc_request() -> gobgp.ListPathRequest:
-        """x"""
+        """Builds a structured message for RPC query to get BGP-LS table
+
+        Returns:
+            gobgp.ListPathRequest: Structured message for RPC query
+        """
         request = gobgp.ListPathRequest(
             table_type=gobgp.LOCAL,
             name="",
@@ -30,10 +40,15 @@ class GoBGPQueryWrapper:
         return request
 
     def __get_bgp_ls_lsdb(self) -> list:
-        """
+        """Submits RPC query (structured message) for BGP-LS table
+
+        Sends gobgp.ListPathRequest object over RPC session to get BGP-LS NLRI objects
 
         Returns:
+            List of NLRI objects for the BGP-LS AFI/SAFI
 
+        Notes:
+            To build required structured, message, calls __build_rpc_request() first
         """
         request = self.__build_rpc_request()
         response = self.stub.ListPath(request)
@@ -41,10 +56,14 @@ class GoBGPQueryWrapper:
         return rtn
 
     def get_lsdb(self) -> list:
-        """
+        """Public method to get a version of the BGP-LS LSDB thats more concise
+
+        The default return from calling self.stub.ListPath(request) is more verbose than the
+        usecase requires, so this method cuts out most of the unncessary information and
+        provides a concise structure of LSAs.
 
         Returns:
-
+            List of Link and Prefix dict objects, filtered for only relevent key-value pairs
         """
         brib = self.__get_bgp_ls_lsdb()
 
@@ -72,8 +91,4 @@ class GoBGPQueryWrapper:
                     }
                 )
 
-            # print(nlri)
-
         return filtered_lsdb
-
-        # return brib
