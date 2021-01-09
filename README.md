@@ -9,6 +9,36 @@ PoC collection of scripts and modules that perform the following
 
 You can start at the file `bgp_ls_vis/scratch2.py`
 
+## Requirements and Resources
+
+* [NetworkX](https://networkx.org/) + matplotlib (`graphing.draw_pyplot_graph`)
+
+```buildoutcfg
+   pip3 install networkx matplotlib pygraphviz
+```
+
+To get pygraphviz working ...
+
+```buildoutcfg
+    Requires:
+        redhat: graphviz-devel python3-dev graphviz pkg-config
+        debian: python3-dev graphviz libgraphviz-dev pkg-config
+```
+
+* [GoBGP](https://github.com/osrg/gobgp)
+* [gRPCio](https://pypi.org/project/grpcio/)
+
+You will need to prepare your own gRPC python interfaces. This process is described in the GoBGP guide on [interfacing 
+from your favourite language](https://github.com/osrg/gobgp/blob/master/docs/sources/grpc-client.md#python).
+
+```buildoutcfg
+    - https://www.grpc.io/docs/languages/python/quickstart/
+    python3 -m pip install grpcio
+    python3 -m pip install grpcio-tools
+    - Clone the gobgp repo and prep the rpc interface to python
+    gobgp\api> python -m grpc_tools.protoc -I./ --python_out=. --grpc_python_out=. *.proto
+```
+
 ## Why?
 
 Because we can, and it's fun
