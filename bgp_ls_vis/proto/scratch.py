@@ -7,13 +7,14 @@ Notes:
     - Clone the gobgp repo and prep the rpc protocols to python
     gobgp\api>python -m grpc_tools.protoc -I./ --python_out=. --grpc_python_out=. *.proto
 """
-import json
-
+import yaml
+from collections import defaultdict
+# RPC & GoBGP imports
 import grpc
 import gobgp_pb2 as gobgp
-from google.protobuf.json_format import MessageToDict
 import gobgp_pb2_grpc
 import attribute_pb2
+from google.protobuf.json_format import MessageToDict
 
 
 def main():
@@ -35,9 +36,11 @@ def main():
         sort_type=True,
     )
 
-    for response in stub.ListPath(request):
-        d = MessageToDict(response, including_default_value_fields=True)
-        print(json.dumps(d))
+    lsdb = [MessageToDict(response, including_default_value_fields=False) for response in stub.ListPath(request)]
+
+    print(len(lsdb))
+    print(yaml.dump(lsdb, sort_keys=False))
+
 
 if __name__ == "__main__":
     main()
