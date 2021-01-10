@@ -39,11 +39,12 @@ def draw_pyplot_graph(graph: nx.Graph):
     Args:
         graph: NetworkX Graph object, or derivative
     """
-    for _, _, data in graph.edges(data=True):
-        data["label"] = f"Cost: {data.get('cost', '')}"
-
-    nx.draw(graph, with_labels=True, font_weight="bold")
-    plt.draw()
+    edge_labels = {(u, v): d["cost"] for u, v, d in graph.edges(data=True)}
+    pos = nx.spring_layout(graph)
+    nx.draw(graph, pos, with_labels=True, font_size=7)
+    nx.draw_networkx_edge_labels(
+        graph, pos, edge_labels=edge_labels, label_pos=0.3, font_size=7
+    )
     plt.show()
 
 
