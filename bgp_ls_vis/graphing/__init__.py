@@ -18,13 +18,18 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
     """
     graph = nx.MultiDiGraph()
 
+    def lsa_cost(lsa):
+        if "igpMetric" not in lsa ["lsattribute"]["link"].keys():
+            lsa["lsattribute"]["link"]["igpMetric"] = 0
+        return lsa["lsattribute"]["link"]["igpMetric"]
+
     for lsa in lsdb:
         if lsa["type"] == "Link":
             graph.add_edge(
                 lsa["localNode"]["igpRouterId"],
                 lsa["remoteNode"]["igpRouterId"],
                 color="red",
-                cost=lsa["lsattribute"]["link"]["igpMetric"],
+                cost=lsa_cost(lsa),
             )
         # if lsa['type'] == "Prefix":
 
