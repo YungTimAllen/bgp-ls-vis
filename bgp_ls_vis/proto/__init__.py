@@ -1,5 +1,6 @@
 """t"""
 # Standard Imports
+import yaml
 from google.protobuf.json_format import MessageToDict
 
 # RPC & GoBGP imports
@@ -12,15 +13,21 @@ from . import attribute_pb2
 class GoBGPQueryWrapper:
     """Class to add abstraction for RPC calls to a GoBGP Instance"""
 
-    def __init__(self, target_ipv4_address, target_rpc_port):
+    def __init__(
+        self,
+        target_ipv4_address: str = "",
+        target_rpc_port: str = "",
+        connect: bool = True,
+    ):
         """Constructor initialises RPC session
 
         Args:
             target_ipv4_address: Management IPv4 Address of GoBGP instance
             target_rpc_port: Management Port of GoBGP Instance
         """
-        channel = grpc.insecure_channel(f"{target_ipv4_address}:{target_rpc_port}")
-        self.stub = gobgp_pb2_grpc.GobgpApiStub(channel)
+        if connect:
+            channel = grpc.insecure_channel(f"{target_ipv4_address}:{target_rpc_port}")
+            self.stub = gobgp_pb2_grpc.GobgpApiStub(channel)
 
     @staticmethod
     def __build_rpc_request() -> gobgp.ListPathRequest:
@@ -58,7 +65,7 @@ class GoBGPQueryWrapper:
         """Dumps the raw BGP-LS table received from GoBGP"""
         return self.__get_bgp_ls_table()
 
-    def get_lsdb(self) -> list:
+    def get_lsdb(self, filename: str = None) -> list:
         """Public method to get a version of the BGP-LS LSDB thats more concise
 
         The default return from calling self.stub.ListPath(request) is more verbose than the
@@ -68,7 +75,11 @@ class GoBGPQueryWrapper:
         Returns:
             List of Link and Prefix dict objects, filtered for only relevent key-value pairs
         """
-        brib = self.__get_bgp_ls_table()
+        brib = (
+            self.__get_bgp_ls_table()
+            if not filename
+            else yaml.load(open(filename, "r"), Loader=yaml.Loader)
+        )
 
         filtered_lsdb = []
 

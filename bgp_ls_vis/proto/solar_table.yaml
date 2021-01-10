@@ -1,0 +1,4804 @@
+---
+- localNode:
+    asn: 100
+    igpRouterId: 0102.5512.8255-02
+    pseudonode: true
+  type: Node
+- localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001-02
+    pseudonode: true
+  type: Node
+- linkDescriptor: {}
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001-02
+    pseudonode: true
+  lsattribute:
+    link:
+      igpMetric: 0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001
+  type: Link
+- localNode:
+    asn: 100
+    igpRouterId: 0102.5512.8002
+  type: Node
+- localNode:
+    asn: 100
+    igpRouterId: 0102.5512.8255
+  type: Node
+- localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0002
+  type: Node
+- localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0002-02
+    pseudonode: true
+  type: Node
+- linkDescriptor: {}
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0002-02
+    pseudonode: true
+  lsattribute:
+    link:
+      igpMetric: 0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5512.8002
+  type: Link
+- linkDescriptor:
+    interfaceAddrIpv4: 10.0.0.14
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0002
+  lsattribute:
+    link:
+      bandwidth: 125000000.0
+      defaultTeMetric: 100
+      igpMetric: 100
+      reservableBandwidth: 125000000.0
+      unreservedBandwidth:
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001-03
+    pseudonode: true
+  type: Link
+- linkDescriptor: {}
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001-03
+    pseudonode: true
+  lsattribute:
+    link:
+      igpMetric: 0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5500.0002
+  type: Link
+- linkDescriptor: {}
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0002-02
+    pseudonode: true
+  lsattribute:
+    link:
+      igpMetric: 0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5500.0002
+  type: Link
+- localNode:
+    asn: 100
+    igpRouterId: 0102.5512.8001
+  type: Node
+- linkDescriptor:
+    interfaceAddrIpv4: 10.0.0.2
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001
+  lsattribute:
+    link:
+      bandwidth: 125000000.0
+      defaultTeMetric: 100
+      igpMetric: 100
+      reservableBandwidth: 125000000.0
+      unreservedBandwidth:
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001-02
+    pseudonode: true
+  type: Link
+- linkDescriptor:
+    interfaceAddrIpv4: 10.0.0.13
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001
+  lsattribute:
+    link:
+      bandwidth: 125000000.0
+      defaultTeMetric: 100
+      igpMetric: 100
+      reservableBandwidth: 125000000.0
+      unreservedBandwidth:
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001-03
+    pseudonode: true
+  type: Link
+- linkDescriptor:
+    interfaceAddrIpv4: 10.0.0.1
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5512.8001
+  lsattribute:
+    link:
+      bandwidth: 125000000.0
+      defaultTeMetric: 100
+      igpMetric: 100
+      reservableBandwidth: 125000000.0
+      unreservedBandwidth:
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001-02
+    pseudonode: true
+  type: Link
+- localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001
+  type: Node
+- linkDescriptor:
+    interfaceAddrIpv4: 10.0.0.26
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0002
+  lsattribute:
+    link:
+      bandwidth: 125000000.0
+      defaultTeMetric: 100
+      igpMetric: 100
+      reservableBandwidth: 125000000.0
+      unreservedBandwidth:
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5500.0002-02
+    pseudonode: true
+  type: Link
+- linkDescriptor: {}
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001-02
+    pseudonode: true
+  lsattribute:
+    link:
+      igpMetric: 0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5512.8001
+  type: Link
+- linkDescriptor: {}
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5512.8255-02
+    pseudonode: true
+  lsattribute:
+    link:
+      igpMetric: 0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5512.8001
+  type: Link
+- linkDescriptor:
+    interfaceAddrIpv4: 10.1.1.1
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5512.8255
+  lsattribute:
+    link:
+      bandwidth: 125000000.0
+      defaultTeMetric: 100
+      igpMetric: 100
+      reservableBandwidth: 125000000.0
+      unreservedBandwidth:
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5512.8255-02
+    pseudonode: true
+  type: Link
+- linkDescriptor: {}
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5512.8255-02
+    pseudonode: true
+  lsattribute:
+    link:
+      igpMetric: 0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5512.8255
+  type: Link
+- linkDescriptor: {}
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001-03
+    pseudonode: true
+  lsattribute:
+    link:
+      igpMetric: 0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001
+  type: Link
+- localNode:
+    asn: 100
+    igpRouterId: 0102.5500.0001-03
+    pseudonode: true
+  type: Node
+- linkDescriptor:
+    interfaceAddrIpv4: 10.0.0.25
+  localNode:
+    asn: 100
+    igpRouterId: 0102.5512.8002
+  lsattribute:
+    link:
+      bandwidth: 125000000.0
+      defaultTeMetric: 100
+      igpMetric: 100
+      reservableBandwidth: 125000000.0
+      unreservedBandwidth:
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+      - 125000000.0
+    node: {}
+    prefix: {}
+  remoteNode:
+    asn: 100
+    igpRouterId: 0102.5500.0002-02
+    pseudonode: true
+  type: Link
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_NODE
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsNodeNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001-03
+                  pseudonode: true
+        - - length
+          - 32
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - flags: {}
+          - - link
+            - {}
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: NLRI { NODE { AS:100 BGP-LS ID:0 0102.5500.0001-03 ISIS-L2:0 } }
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001-02
+                  pseudonode: true
+              - - linkDescriptor
+                - interfaceAddrIpv4: 10.0.0.2
+        - - length
+          - 65334
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - bandwidth: 125000000.0
+              defaultTeMetric: 100
+              igpMetric: 100
+              reservableBandwidth: 125000000.0
+              unreservedBandwidth:
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.1.1.1
+                  - - length
+                    - 65202
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.13
+                  - - length
+                    - 65268
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.2
+                  - - length
+                    - 65334
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.25
+                  - - length
+                    - 65400
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.26
+                  - - length
+                    - 65466
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.1
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.14
+                  - - length
+                    - 62
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5500.0001 REMOTE_NODE: 0102.5500.0001-02
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8255-02
+                  pseudonode: true
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8001
+              - - linkDescriptor
+                - {}
+        - - length
+          - 65242
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - {}
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65184
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65242
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65300
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65358
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65416
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65474
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 54
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5512.8255-02 REMOTE_NODE: 0102.5512.8001
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0002-02
+                  pseudonode: true
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0002
+              - - linkDescriptor
+                - {}
+        - - length
+          - 65358
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - {}
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65184
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65242
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65300
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65358
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65416
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65474
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 54
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5500.0002-02 REMOTE_NODE: 0102.5500.0002
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_NODE
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsNodeNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001-02
+                  pseudonode: true
+        - - length
+          - 32
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - flags: {}
+          - - link
+            - {}
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: NLRI { NODE { AS:100 BGP-LS ID:0 0102.5500.0001-02 ISIS-L2:0 } }
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8255
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8255-02
+                  pseudonode: true
+              - - linkDescriptor
+                - interfaceAddrIpv4: 10.1.1.1
+        - - length
+          - 65202
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - bandwidth: 125000000.0
+              defaultTeMetric: 100
+              igpMetric: 100
+              reservableBandwidth: 125000000.0
+              unreservedBandwidth:
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.1.1.1
+                  - - length
+                    - 65202
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.13
+                  - - length
+                    - 65268
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.2
+                  - - length
+                    - 65334
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.25
+                  - - length
+                    - 65400
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.26
+                  - - length
+                    - 65466
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.1
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.14
+                  - - length
+                    - 62
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5512.8255 REMOTE_NODE: 0102.5512.8255-02
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_NODE
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsNodeNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0002-02
+                  pseudonode: true
+        - - length
+          - 32
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - flags: {}
+          - - link
+            - {}
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: NLRI { NODE { AS:100 BGP-LS ID:0 0102.5500.0002-02 ISIS-L2:0 } }
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001-02
+                  pseudonode: true
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8001
+              - - linkDescriptor
+                - {}
+        - - length
+          - 65300
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - {}
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65184
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65242
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65300
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65358
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65416
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65474
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 54
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5500.0001-02 REMOTE_NODE: 0102.5512.8001
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_NODE
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsNodeNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8255
+        - - length
+          - 31
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - flags: {}
+              isisArea: SQAB
+              localRouterId: 10.255.128.255
+              name: ASBR1
+          - - link
+            - localRouterId: 10.255.128.255
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                  - - length
+                    - 31
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: NLRI { NODE { AS:100 BGP-LS ID:0 0102.5512.8255 ISIS-L2:0 } }
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8255-02
+                  pseudonode: true
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8255
+              - - linkDescriptor
+                - {}
+        - - length
+          - 65184
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - {}
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65184
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65242
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65300
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65358
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65416
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65474
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 54
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5512.8255-02 REMOTE_NODE: 0102.5512.8255
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_NODE
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsNodeNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8001
+        - - length
+          - 31
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - flags: {}
+              isisArea: SQAB
+              localRouterId: 10.255.128.1
+              name: PE-1
+          - - link
+            - localRouterId: 10.255.128.1
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                  - - length
+                    - 31
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: NLRI { NODE { AS:100 BGP-LS ID:0 0102.5512.8001 ISIS-L2:0 } }
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001-02
+                  pseudonode: true
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001
+              - - linkDescriptor
+                - {}
+        - - length
+          - 65416
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - {}
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65184
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65242
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65300
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65358
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65416
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65474
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 54
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5500.0001-02 REMOTE_NODE: 0102.5500.0001
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0002-02
+                  pseudonode: true
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8002
+              - - linkDescriptor
+                - {}
+        - - length
+          - 65532
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - {}
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65184
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65242
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65300
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65358
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65416
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65474
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 54
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5500.0002-02 REMOTE_NODE: 0102.5512.8002
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_NODE
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsNodeNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8002
+        - - length
+          - 31
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - flags: {}
+              isisArea: SQAB
+              localRouterId: 10.255.128.2
+              name: PE-2
+          - - link
+            - localRouterId: 10.255.128.2
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                  - - length
+                    - 31
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: NLRI { NODE { AS:100 BGP-LS ID:0 0102.5512.8002 ISIS-L2:0 } }
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0002
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001-03
+                  pseudonode: true
+              - - linkDescriptor
+                - interfaceAddrIpv4: 10.0.0.14
+        - - length
+          - 62
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - bandwidth: 125000000.0
+              defaultTeMetric: 100
+              igpMetric: 100
+              reservableBandwidth: 125000000.0
+              unreservedBandwidth:
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.1.1.1
+                  - - length
+                    - 65202
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.13
+                  - - length
+                    - 65268
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.2
+                  - - length
+                    - 65334
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.25
+                  - - length
+                    - 65400
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.26
+                  - - length
+                    - 65466
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.1
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.14
+                  - - length
+                    - 62
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5500.0002 REMOTE_NODE: 0102.5500.0001-03
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_NODE
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsNodeNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0002
+        - - length
+          - 31
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - flags: {}
+              isisArea: SQAB
+              localRouterId: 10.255.0.2
+              name: P-2
+          - - link
+            - localRouterId: 10.255.0.2
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                  - - length
+                    - 31
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: NLRI { NODE { AS:100 BGP-LS ID:0 0102.5500.0002 ISIS-L2:0 } }
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8002
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0002-02
+                  pseudonode: true
+              - - linkDescriptor
+                - interfaceAddrIpv4: 10.0.0.25
+        - - length
+          - 65400
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - bandwidth: 125000000.0
+              defaultTeMetric: 100
+              igpMetric: 100
+              reservableBandwidth: 125000000.0
+              unreservedBandwidth:
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.1.1.1
+                  - - length
+                    - 65202
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.13
+                  - - length
+                    - 65268
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.2
+                  - - length
+                    - 65334
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.25
+                  - - length
+                    - 65400
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.26
+                  - - length
+                    - 65466
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.1
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.14
+                  - - length
+                    - 62
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5512.8002 REMOTE_NODE: 0102.5500.0002-02
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_NODE
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsNodeNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8255-02
+                  pseudonode: true
+        - - length
+          - 32
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - flags: {}
+          - - link
+            - {}
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                  - - length
+                    - 32
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: NLRI { NODE { AS:100 BGP-LS ID:0 0102.5512.8255-02 ISIS-L2:0 } }
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5512.8001
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001-02
+                  pseudonode: true
+              - - linkDescriptor
+                - interfaceAddrIpv4: 10.0.0.1
+        - - length
+          - 65532
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - bandwidth: 125000000.0
+              defaultTeMetric: 100
+              igpMetric: 100
+              reservableBandwidth: 125000000.0
+              unreservedBandwidth:
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.1.1.1
+                  - - length
+                    - 65202
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.13
+                  - - length
+                    - 65268
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.2
+                  - - length
+                    - 65334
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.25
+                  - - length
+                    - 65400
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.26
+                  - - length
+                    - 65466
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.1
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.14
+                  - - length
+                    - 62
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5512.8001 REMOTE_NODE: 0102.5500.0001-02
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001-03
+                  pseudonode: true
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001
+              - - linkDescriptor
+                - {}
+        - - length
+          - 54
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - {}
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65184
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65242
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65300
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65358
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65416
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65474
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 54
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5500.0001-03 REMOTE_NODE: 0102.5500.0001
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_NODE
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsNodeNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001
+        - - length
+          - 31
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - flags: {}
+              isisArea: SQAB
+              localRouterId: 10.255.0.1
+              name: P-1
+          - - link
+            - localRouterId: 10.255.0.1
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_NODE
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsNodeNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                  - - length
+                    - 31
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: NLRI { NODE { AS:100 BGP-LS ID:0 0102.5500.0001 ISIS-L2:0 } }
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0002
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0002-02
+                  pseudonode: true
+              - - linkDescriptor
+                - interfaceAddrIpv4: 10.0.0.26
+        - - length
+          - 65466
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - bandwidth: 125000000.0
+              defaultTeMetric: 100
+              igpMetric: 100
+              reservableBandwidth: 125000000.0
+              unreservedBandwidth:
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.1.1.1
+                  - - length
+                    - 65202
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.13
+                  - - length
+                    - 65268
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.2
+                  - - length
+                    - 65334
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.25
+                  - - length
+                    - 65400
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.26
+                  - - length
+                    - 65466
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.1
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.14
+                  - - length
+                    - 62
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5500.0002 REMOTE_NODE: 0102.5500.0002-02
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001-03
+                  pseudonode: true
+              - - linkDescriptor
+                - interfaceAddrIpv4: 10.0.0.13
+        - - length
+          - 65268
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - bandwidth: 125000000.0
+              defaultTeMetric: 100
+              igpMetric: 100
+              reservableBandwidth: 125000000.0
+              unreservedBandwidth:
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+              - 125000000.0
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.1.1.1
+                  - - length
+                    - 65202
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.13
+                  - - length
+                    - 65268
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.2
+                  - - length
+                    - 65334
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.25
+                  - - length
+                    - 65400
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.26
+                  - - length
+                    - 65466
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.1
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - linkDescriptor
+                          - interfaceAddrIpv4: 10.0.0.14
+                  - - length
+                    - 62
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5500.0001 REMOTE_NODE: 0102.5500.0001-03
+      LINK: UNKNOWN} }'
+- destination:
+    paths:
+    - age: '2021-01-10T12:35:34Z'
+      best: true
+      family:
+        afi: AFI_LS
+        safi: SAFI_LS
+      localIdentifier: 1
+      neighborIp: 172.16.0.254
+      nlri: !!python/object/apply:collections.OrderedDict
+      - - - '@type'
+          - type.googleapis.com/gobgpapi.LsAddrPrefix
+        - - type
+          - LS_NLRI_LINK
+        - - nlri
+          - !!python/object/apply:collections.OrderedDict
+            - - - '@type'
+                - type.googleapis.com/gobgpapi.LsLinkNLRI
+              - - localNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0001-03
+                  pseudonode: true
+              - - remoteNode
+                - asn: 100
+                  igpRouterId: 0102.5500.0002
+              - - linkDescriptor
+                - {}
+        - - length
+          - 65474
+        - - protocolId
+          - LS_PROTOCOL_ISIS_L2
+      pattrs:
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.OriginAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.AsPathAttribute
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LocalPrefAttribute
+          - - localPref
+            - 100
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.LsAttribute
+          - - node
+            - {}
+          - - link
+            - {}
+          - - prefix
+            - {}
+      - !!python/object/apply:collections.OrderedDict
+        - - - '@type'
+            - type.googleapis.com/gobgpapi.MpReachNLRIAttribute
+          - - family
+            - afi: AFI_LS
+              safi: SAFI_LS
+          - - nextHops
+            - - 172.16.0.254
+          - - nlris
+            - - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65184
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8255-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65242
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65300
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65358
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65416
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65474
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0002-02
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5512.8002
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 65532
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+              - !!python/object/apply:collections.OrderedDict
+                - - - '@type'
+                    - type.googleapis.com/gobgpapi.LsAddrPrefix
+                  - - type
+                    - LS_NLRI_LINK
+                  - - nlri
+                    - !!python/object/apply:collections.OrderedDict
+                      - - - '@type'
+                          - type.googleapis.com/gobgpapi.LsLinkNLRI
+                        - - localNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001-03
+                            pseudonode: true
+                        - - remoteNode
+                          - asn: 100
+                            igpRouterId: 0102.5500.0001
+                        - - linkDescriptor
+                          - {}
+                  - - length
+                    - 54
+                  - - protocolId
+                    - LS_PROTOCOL_ISIS_L2
+      sourceAsn: 100
+      sourceId: 10.255.128.255
+      validation: {}
+    prefix: 'NLRI { LINK { LOCAL_NODE: 0102.5500.0001-03 REMOTE_NODE: 0102.5500.0002
+      LINK: UNKNOWN} }'
