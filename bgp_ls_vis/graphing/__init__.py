@@ -3,6 +3,20 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 
+def lsa_cost(lsa: dict) -> int:
+    """Checks a given LSA to see if the igpMetric attribute is present in the lsattr
+
+    Args:
+        lsa: lsa dict object from lsdb (See: GoBGPQueryWrapper.build_nx_from_lsdb)
+
+    Returns:
+        Integer value for cost inside lsattr if present, else zero
+    """
+    if "igpMetric" not in lsa["lsattribute"]["link"].keys():
+        lsa["lsattribute"]["link"]["igpMetric"] = 0
+    return lsa["lsattribute"]["link"]["igpMetric"]
+
+
 def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
     """Given list of LSAs (LSDB), builds NetworkX Graph object
 
@@ -11,22 +25,24 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
 
     Returns:
         NetworkX MultiDiGraph object
-
-    Requires:
-        redhat: graphviz-devel python3-dev graphviz pkg-config
-        debian: python3-dev graphviz libgraphviz-dev pkg-config
     """
     graph = nx.MultiDiGraph()
+
+    for lsa in lsdb:
+        if lsa["type"] == "Node":
+            b_pseudonode = False
+            if "pseudonode" in list(lsa["localNode"].keys()):
+                b_pseudonode = lsa["localNode"]["pseudonode"]
+            graph.add_node(lsa["localNode"]["igpRouterId"], pseudonode=b_pseudonode)
 
     for lsa in lsdb:
         if lsa["type"] == "Link":
             graph.add_edge(
                 lsa["localNode"]["igpRouterId"],
                 lsa["remoteNode"]["igpRouterId"],
-                color="red",
-                cost=lsa["lsattribute"]["link"]["igpMetric"],
+                cost=lsa_cost(lsa),
+                pseudonode="pseudonode" in lsa["remoteNode"].keys(),
             )
-        # if lsa['type'] == "Prefix":
 
     return graph
 
@@ -38,10 +54,25 @@ def draw_pyplot_graph(graph: nx.Graph):
 
     Args:
         graph: NetworkX Graph object, or derivative
+
+    Requires:
+        import matplotlib.pyplot as plt
     """
+    # Create dict of key=node, value=pseudonode status (bool)
+    pns = {v: d["pseudonode"] for _, v, d in graph.edges(data=True)}
+    # color_map is an ordered list, where order is for `node in graph`
+    # This is the same order nx.draw encounters nodes
+    color_map = []
+    for node in graph:
+        if pns[node]:  # If node is a pseudonode ...
+            color_map.append("blue")
+        else:
+            color_map.append("green")
+
     edge_labels = {(u, v): d["cost"] for u, v, d in graph.edges(data=True)}
+
     pos = nx.spring_layout(graph)
-    nx.draw(graph, pos, with_labels=True, font_size=7)
+    nx.draw(graph, pos, node_color=color_map, with_labels=True, font_size=7)
     nx.draw_networkx_edge_labels(
         graph, pos, edge_labels=edge_labels, label_pos=0.3, font_size=7
     )
@@ -49,11 +80,15 @@ def draw_pyplot_graph(graph: nx.Graph):
 
 
 def draw_graphviz_graph(graph: nx.Graph, outfile: str):
-    """
+    """Draws NetworkX graph object to file using Graphviz
+
     Args:
         graph: NetworkX Graph object, or derivative
+
     Requires:
         pip3 install pygraphviz
+        redhat: graphviz-devel python3-dev graphviz pkg-config
+        debian: python3-dev graphviz libgraphviz-dev pkg-config
     """
 
     # Weight labels
