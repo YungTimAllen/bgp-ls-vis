@@ -1,3 +1,6 @@
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![Docstrings: Google](https://img.shields.io/badge/Docstrings-Google-green)](https://google.github.io/styleguide/pyguide.html#s3.8-comments-and-docstrings)
+[![Discord](https://img.shields.io/discord/245189311681527808.svg?label=Networking&logo=discord)](https://discord.me/networking)
 # BGP Link-State AFI Visualiser (bgp-ls-vis)
 
 PoC collection of scripts and modules that perform the following
