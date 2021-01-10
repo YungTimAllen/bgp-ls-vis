@@ -99,6 +99,14 @@ class GoBGPQueryWrapper:
                     for attr in paths_pattrs
                     if attr["@type"] == "type.googleapis.com/gobgpapi.LsAttribute"
                 ][0]
+                print(paths_nlri["@type"] + ("- " * 10))
+                print(yaml.dump(paths_pattr_lsattr["node"]))
+            else:
+                paths_pattr_lsattr = {
+                    "node": None,
+                    "link": None,
+                    "prefix": None,
+                }
 
             if paths_nlri["@type"] == "type.googleapis.com/gobgpapi.LsLinkNLRI":
                 filtered_lsdb.append(
@@ -128,6 +136,11 @@ class GoBGPQueryWrapper:
                     {
                         "type": "Node",
                         "localNode": paths_nlri["localNode"],
+                        "lsattribute": {
+                            "node": paths_pattr_lsattr["node"],
+                            "link": paths_pattr_lsattr["link"],
+                            "prefix": paths_pattr_lsattr["prefix"],
+                        },
                     }
                 )
 
