@@ -3,6 +3,12 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 
+def lsa_cost(lsa):
+    if "igpMetric" not in lsa["lsattribute"]["link"].keys():
+        lsa["lsattribute"]["link"]["igpMetric"] = 0
+    return lsa["lsattribute"]["link"]["igpMetric"]
+
+
 def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
     """Given list of LSAs (LSDB), builds NetworkX Graph object
 
@@ -19,7 +25,7 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
             graph.add_edge(
                 lsa["localNode"]["igpRouterId"],
                 lsa["remoteNode"]["igpRouterId"],
-                cost=lsa["lsattribute"]["link"]["igpMetric"],
+                cost=lsa_cost(lsa),
             )
 
     return graph
