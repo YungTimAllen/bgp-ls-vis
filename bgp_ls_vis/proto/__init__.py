@@ -99,8 +99,6 @@ class GoBGPQueryWrapper:
                     for attr in paths_pattrs
                     if attr["@type"] == "type.googleapis.com/gobgpapi.LsAttribute"
                 ][0]
-                print(paths_nlri["@type"] + ("- " * 10))
-                print(yaml.dump(paths_pattr_lsattr["node"]))
             else:
                 paths_pattr_lsattr = {
                     "node": None,
