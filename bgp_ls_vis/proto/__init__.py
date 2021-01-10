@@ -1,6 +1,5 @@
 """t"""
 # Standard Imports
-from collections import defaultdict
 from google.protobuf.json_format import MessageToDict
 
 # RPC & GoBGP imports
@@ -39,7 +38,7 @@ class GoBGPQueryWrapper:
         )
         return request
 
-    def __get_bgp_ls_lsdb(self) -> list:
+    def __get_bgp_ls_table(self) -> list:
         """Submits RPC query (structured message) for BGP-LS table
 
         Sends gobgp.ListPathRequest object over RPC session to get BGP-LS NLRI objects
@@ -55,9 +54,9 @@ class GoBGPQueryWrapper:
         rtn = [MessageToDict(nlri) for nlri in response]
         return rtn
 
-    def debug(self):
-        """x"""
-        return self.__get_bgp_ls_lsdb()
+    def debug(self) -> dict:
+        """Dumps the raw BGP-LS table received from GoBGP"""
+        return self.__get_bgp_ls_table()
 
     def get_lsdb(self) -> list:
         """Public method to get a version of the BGP-LS LSDB thats more concise
@@ -69,7 +68,7 @@ class GoBGPQueryWrapper:
         Returns:
             List of Link and Prefix dict objects, filtered for only relevent key-value pairs
         """
-        brib = self.__get_bgp_ls_lsdb()
+        brib = self.__get_bgp_ls_table()
 
         filtered_lsdb = []
 

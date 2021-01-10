@@ -8,9 +8,7 @@ from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
 class GobgpApiStub(object):
-    """Interface exported by the server.
-
-    """
+    """Interface exported by the server."""
 
     def __init__(self, channel):
         """Constructor.
@@ -19,1739 +17,2360 @@ class GobgpApiStub(object):
             channel: A grpc.Channel.
         """
         self.StartBgp = channel.unary_unary(
-                '/gobgpapi.GobgpApi/StartBgp',
-                request_serializer=gobgp__pb2.StartBgpRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/StartBgp",
+            request_serializer=gobgp__pb2.StartBgpRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.StopBgp = channel.unary_unary(
-                '/gobgpapi.GobgpApi/StopBgp',
-                request_serializer=gobgp__pb2.StopBgpRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/StopBgp",
+            request_serializer=gobgp__pb2.StopBgpRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.GetBgp = channel.unary_unary(
-                '/gobgpapi.GobgpApi/GetBgp',
-                request_serializer=gobgp__pb2.GetBgpRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.GetBgpResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/GetBgp",
+            request_serializer=gobgp__pb2.GetBgpRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.GetBgpResponse.FromString,
+        )
         self.AddPeer = channel.unary_unary(
-                '/gobgpapi.GobgpApi/AddPeer',
-                request_serializer=gobgp__pb2.AddPeerRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/AddPeer",
+            request_serializer=gobgp__pb2.AddPeerRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.DeletePeer = channel.unary_unary(
-                '/gobgpapi.GobgpApi/DeletePeer',
-                request_serializer=gobgp__pb2.DeletePeerRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/DeletePeer",
+            request_serializer=gobgp__pb2.DeletePeerRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.ListPeer = channel.unary_stream(
-                '/gobgpapi.GobgpApi/ListPeer',
-                request_serializer=gobgp__pb2.ListPeerRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.ListPeerResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/ListPeer",
+            request_serializer=gobgp__pb2.ListPeerRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.ListPeerResponse.FromString,
+        )
         self.UpdatePeer = channel.unary_unary(
-                '/gobgpapi.GobgpApi/UpdatePeer',
-                request_serializer=gobgp__pb2.UpdatePeerRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.UpdatePeerResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/UpdatePeer",
+            request_serializer=gobgp__pb2.UpdatePeerRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.UpdatePeerResponse.FromString,
+        )
         self.ResetPeer = channel.unary_unary(
-                '/gobgpapi.GobgpApi/ResetPeer',
-                request_serializer=gobgp__pb2.ResetPeerRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/ResetPeer",
+            request_serializer=gobgp__pb2.ResetPeerRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.ShutdownPeer = channel.unary_unary(
-                '/gobgpapi.GobgpApi/ShutdownPeer',
-                request_serializer=gobgp__pb2.ShutdownPeerRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/ShutdownPeer",
+            request_serializer=gobgp__pb2.ShutdownPeerRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.EnablePeer = channel.unary_unary(
-                '/gobgpapi.GobgpApi/EnablePeer',
-                request_serializer=gobgp__pb2.EnablePeerRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/EnablePeer",
+            request_serializer=gobgp__pb2.EnablePeerRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.DisablePeer = channel.unary_unary(
-                '/gobgpapi.GobgpApi/DisablePeer',
-                request_serializer=gobgp__pb2.DisablePeerRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/DisablePeer",
+            request_serializer=gobgp__pb2.DisablePeerRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.MonitorPeer = channel.unary_stream(
-                '/gobgpapi.GobgpApi/MonitorPeer',
-                request_serializer=gobgp__pb2.MonitorPeerRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.MonitorPeerResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/MonitorPeer",
+            request_serializer=gobgp__pb2.MonitorPeerRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.MonitorPeerResponse.FromString,
+        )
         self.AddPeerGroup = channel.unary_unary(
-                '/gobgpapi.GobgpApi/AddPeerGroup',
-                request_serializer=gobgp__pb2.AddPeerGroupRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/AddPeerGroup",
+            request_serializer=gobgp__pb2.AddPeerGroupRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.DeletePeerGroup = channel.unary_unary(
-                '/gobgpapi.GobgpApi/DeletePeerGroup',
-                request_serializer=gobgp__pb2.DeletePeerGroupRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/DeletePeerGroup",
+            request_serializer=gobgp__pb2.DeletePeerGroupRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.UpdatePeerGroup = channel.unary_unary(
-                '/gobgpapi.GobgpApi/UpdatePeerGroup',
-                request_serializer=gobgp__pb2.UpdatePeerGroupRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.UpdatePeerGroupResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/UpdatePeerGroup",
+            request_serializer=gobgp__pb2.UpdatePeerGroupRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.UpdatePeerGroupResponse.FromString,
+        )
         self.AddDynamicNeighbor = channel.unary_unary(
-                '/gobgpapi.GobgpApi/AddDynamicNeighbor',
-                request_serializer=gobgp__pb2.AddDynamicNeighborRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/AddDynamicNeighbor",
+            request_serializer=gobgp__pb2.AddDynamicNeighborRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.AddPath = channel.unary_unary(
-                '/gobgpapi.GobgpApi/AddPath',
-                request_serializer=gobgp__pb2.AddPathRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.AddPathResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/AddPath",
+            request_serializer=gobgp__pb2.AddPathRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.AddPathResponse.FromString,
+        )
         self.DeletePath = channel.unary_unary(
-                '/gobgpapi.GobgpApi/DeletePath',
-                request_serializer=gobgp__pb2.DeletePathRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/DeletePath",
+            request_serializer=gobgp__pb2.DeletePathRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.ListPath = channel.unary_stream(
-                '/gobgpapi.GobgpApi/ListPath',
-                request_serializer=gobgp__pb2.ListPathRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.ListPathResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/ListPath",
+            request_serializer=gobgp__pb2.ListPathRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.ListPathResponse.FromString,
+        )
         self.AddPathStream = channel.stream_unary(
-                '/gobgpapi.GobgpApi/AddPathStream',
-                request_serializer=gobgp__pb2.AddPathStreamRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/AddPathStream",
+            request_serializer=gobgp__pb2.AddPathStreamRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.GetTable = channel.unary_unary(
-                '/gobgpapi.GobgpApi/GetTable',
-                request_serializer=gobgp__pb2.GetTableRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.GetTableResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/GetTable",
+            request_serializer=gobgp__pb2.GetTableRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.GetTableResponse.FromString,
+        )
         self.MonitorTable = channel.unary_stream(
-                '/gobgpapi.GobgpApi/MonitorTable',
-                request_serializer=gobgp__pb2.MonitorTableRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.MonitorTableResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/MonitorTable",
+            request_serializer=gobgp__pb2.MonitorTableRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.MonitorTableResponse.FromString,
+        )
         self.AddVrf = channel.unary_unary(
-                '/gobgpapi.GobgpApi/AddVrf',
-                request_serializer=gobgp__pb2.AddVrfRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/AddVrf",
+            request_serializer=gobgp__pb2.AddVrfRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.DeleteVrf = channel.unary_unary(
-                '/gobgpapi.GobgpApi/DeleteVrf',
-                request_serializer=gobgp__pb2.DeleteVrfRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/DeleteVrf",
+            request_serializer=gobgp__pb2.DeleteVrfRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.ListVrf = channel.unary_stream(
-                '/gobgpapi.GobgpApi/ListVrf',
-                request_serializer=gobgp__pb2.ListVrfRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.ListVrfResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/ListVrf",
+            request_serializer=gobgp__pb2.ListVrfRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.ListVrfResponse.FromString,
+        )
         self.AddPolicy = channel.unary_unary(
-                '/gobgpapi.GobgpApi/AddPolicy',
-                request_serializer=gobgp__pb2.AddPolicyRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/AddPolicy",
+            request_serializer=gobgp__pb2.AddPolicyRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.DeletePolicy = channel.unary_unary(
-                '/gobgpapi.GobgpApi/DeletePolicy',
-                request_serializer=gobgp__pb2.DeletePolicyRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/DeletePolicy",
+            request_serializer=gobgp__pb2.DeletePolicyRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.ListPolicy = channel.unary_stream(
-                '/gobgpapi.GobgpApi/ListPolicy',
-                request_serializer=gobgp__pb2.ListPolicyRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.ListPolicyResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/ListPolicy",
+            request_serializer=gobgp__pb2.ListPolicyRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.ListPolicyResponse.FromString,
+        )
         self.SetPolicies = channel.unary_unary(
-                '/gobgpapi.GobgpApi/SetPolicies',
-                request_serializer=gobgp__pb2.SetPoliciesRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/SetPolicies",
+            request_serializer=gobgp__pb2.SetPoliciesRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.AddDefinedSet = channel.unary_unary(
-                '/gobgpapi.GobgpApi/AddDefinedSet',
-                request_serializer=gobgp__pb2.AddDefinedSetRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/AddDefinedSet",
+            request_serializer=gobgp__pb2.AddDefinedSetRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.DeleteDefinedSet = channel.unary_unary(
-                '/gobgpapi.GobgpApi/DeleteDefinedSet',
-                request_serializer=gobgp__pb2.DeleteDefinedSetRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/DeleteDefinedSet",
+            request_serializer=gobgp__pb2.DeleteDefinedSetRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.ListDefinedSet = channel.unary_stream(
-                '/gobgpapi.GobgpApi/ListDefinedSet',
-                request_serializer=gobgp__pb2.ListDefinedSetRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.ListDefinedSetResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/ListDefinedSet",
+            request_serializer=gobgp__pb2.ListDefinedSetRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.ListDefinedSetResponse.FromString,
+        )
         self.AddStatement = channel.unary_unary(
-                '/gobgpapi.GobgpApi/AddStatement',
-                request_serializer=gobgp__pb2.AddStatementRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/AddStatement",
+            request_serializer=gobgp__pb2.AddStatementRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.DeleteStatement = channel.unary_unary(
-                '/gobgpapi.GobgpApi/DeleteStatement',
-                request_serializer=gobgp__pb2.DeleteStatementRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/DeleteStatement",
+            request_serializer=gobgp__pb2.DeleteStatementRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.ListStatement = channel.unary_stream(
-                '/gobgpapi.GobgpApi/ListStatement',
-                request_serializer=gobgp__pb2.ListStatementRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.ListStatementResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/ListStatement",
+            request_serializer=gobgp__pb2.ListStatementRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.ListStatementResponse.FromString,
+        )
         self.AddPolicyAssignment = channel.unary_unary(
-                '/gobgpapi.GobgpApi/AddPolicyAssignment',
-                request_serializer=gobgp__pb2.AddPolicyAssignmentRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/AddPolicyAssignment",
+            request_serializer=gobgp__pb2.AddPolicyAssignmentRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.DeletePolicyAssignment = channel.unary_unary(
-                '/gobgpapi.GobgpApi/DeletePolicyAssignment',
-                request_serializer=gobgp__pb2.DeletePolicyAssignmentRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/DeletePolicyAssignment",
+            request_serializer=gobgp__pb2.DeletePolicyAssignmentRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.ListPolicyAssignment = channel.unary_stream(
-                '/gobgpapi.GobgpApi/ListPolicyAssignment',
-                request_serializer=gobgp__pb2.ListPolicyAssignmentRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.ListPolicyAssignmentResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/ListPolicyAssignment",
+            request_serializer=gobgp__pb2.ListPolicyAssignmentRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.ListPolicyAssignmentResponse.FromString,
+        )
         self.SetPolicyAssignment = channel.unary_unary(
-                '/gobgpapi.GobgpApi/SetPolicyAssignment',
-                request_serializer=gobgp__pb2.SetPolicyAssignmentRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/SetPolicyAssignment",
+            request_serializer=gobgp__pb2.SetPolicyAssignmentRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.AddRpki = channel.unary_unary(
-                '/gobgpapi.GobgpApi/AddRpki',
-                request_serializer=gobgp__pb2.AddRpkiRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/AddRpki",
+            request_serializer=gobgp__pb2.AddRpkiRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.DeleteRpki = channel.unary_unary(
-                '/gobgpapi.GobgpApi/DeleteRpki',
-                request_serializer=gobgp__pb2.DeleteRpkiRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/DeleteRpki",
+            request_serializer=gobgp__pb2.DeleteRpkiRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.ListRpki = channel.unary_stream(
-                '/gobgpapi.GobgpApi/ListRpki',
-                request_serializer=gobgp__pb2.ListRpkiRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.ListRpkiResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/ListRpki",
+            request_serializer=gobgp__pb2.ListRpkiRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.ListRpkiResponse.FromString,
+        )
         self.EnableRpki = channel.unary_unary(
-                '/gobgpapi.GobgpApi/EnableRpki',
-                request_serializer=gobgp__pb2.EnableRpkiRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/EnableRpki",
+            request_serializer=gobgp__pb2.EnableRpkiRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.DisableRpki = channel.unary_unary(
-                '/gobgpapi.GobgpApi/DisableRpki',
-                request_serializer=gobgp__pb2.DisableRpkiRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/DisableRpki",
+            request_serializer=gobgp__pb2.DisableRpkiRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.ResetRpki = channel.unary_unary(
-                '/gobgpapi.GobgpApi/ResetRpki',
-                request_serializer=gobgp__pb2.ResetRpkiRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/ResetRpki",
+            request_serializer=gobgp__pb2.ResetRpkiRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.ListRpkiTable = channel.unary_stream(
-                '/gobgpapi.GobgpApi/ListRpkiTable',
-                request_serializer=gobgp__pb2.ListRpkiTableRequest.SerializeToString,
-                response_deserializer=gobgp__pb2.ListRpkiTableResponse.FromString,
-                )
+            "/gobgpapi.GobgpApi/ListRpkiTable",
+            request_serializer=gobgp__pb2.ListRpkiTableRequest.SerializeToString,
+            response_deserializer=gobgp__pb2.ListRpkiTableResponse.FromString,
+        )
         self.EnableZebra = channel.unary_unary(
-                '/gobgpapi.GobgpApi/EnableZebra',
-                request_serializer=gobgp__pb2.EnableZebraRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/EnableZebra",
+            request_serializer=gobgp__pb2.EnableZebraRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.EnableMrt = channel.unary_unary(
-                '/gobgpapi.GobgpApi/EnableMrt',
-                request_serializer=gobgp__pb2.EnableMrtRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/EnableMrt",
+            request_serializer=gobgp__pb2.EnableMrtRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.DisableMrt = channel.unary_unary(
-                '/gobgpapi.GobgpApi/DisableMrt',
-                request_serializer=gobgp__pb2.DisableMrtRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/DisableMrt",
+            request_serializer=gobgp__pb2.DisableMrtRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.AddBmp = channel.unary_unary(
-                '/gobgpapi.GobgpApi/AddBmp',
-                request_serializer=gobgp__pb2.AddBmpRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/AddBmp",
+            request_serializer=gobgp__pb2.AddBmpRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.DeleteBmp = channel.unary_unary(
-                '/gobgpapi.GobgpApi/DeleteBmp',
-                request_serializer=gobgp__pb2.DeleteBmpRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/DeleteBmp",
+            request_serializer=gobgp__pb2.DeleteBmpRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
         self.SetLogLevel = channel.unary_unary(
-                '/gobgpapi.GobgpApi/SetLogLevel',
-                request_serializer=gobgp__pb2.SetLogLevelRequest.SerializeToString,
-                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+            "/gobgpapi.GobgpApi/SetLogLevel",
+            request_serializer=gobgp__pb2.SetLogLevelRequest.SerializeToString,
+            response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
 
 
 class GobgpApiServicer(object):
-    """Interface exported by the server.
-
-    """
+    """Interface exported by the server."""
 
     def StartBgp(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def StopBgp(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def GetBgp(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def AddPeer(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def DeletePeer(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def ListPeer(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def UpdatePeer(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def ResetPeer(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def ShutdownPeer(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def EnablePeer(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def DisablePeer(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def MonitorPeer(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def AddPeerGroup(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def DeletePeerGroup(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def UpdatePeerGroup(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def AddDynamicNeighbor(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def AddPath(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def DeletePath(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def ListPath(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def AddPathStream(self, request_iterator, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def GetTable(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def MonitorTable(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def AddVrf(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def DeleteVrf(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def ListVrf(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def AddPolicy(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def DeletePolicy(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def ListPolicy(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def SetPolicies(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def AddDefinedSet(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def DeleteDefinedSet(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def ListDefinedSet(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def AddStatement(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def DeleteStatement(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def ListStatement(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def AddPolicyAssignment(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def DeletePolicyAssignment(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def ListPolicyAssignment(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def SetPolicyAssignment(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def AddRpki(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def DeleteRpki(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def ListRpki(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def EnableRpki(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def DisableRpki(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def ResetRpki(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def ListRpkiTable(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def EnableZebra(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def EnableMrt(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def DisableMrt(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def AddBmp(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def DeleteBmp(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def SetLogLevel(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
 
 def add_GobgpApiServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'StartBgp': grpc.unary_unary_rpc_method_handler(
-                    servicer.StartBgp,
-                    request_deserializer=gobgp__pb2.StartBgpRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'StopBgp': grpc.unary_unary_rpc_method_handler(
-                    servicer.StopBgp,
-                    request_deserializer=gobgp__pb2.StopBgpRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'GetBgp': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetBgp,
-                    request_deserializer=gobgp__pb2.GetBgpRequest.FromString,
-                    response_serializer=gobgp__pb2.GetBgpResponse.SerializeToString,
-            ),
-            'AddPeer': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddPeer,
-                    request_deserializer=gobgp__pb2.AddPeerRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'DeletePeer': grpc.unary_unary_rpc_method_handler(
-                    servicer.DeletePeer,
-                    request_deserializer=gobgp__pb2.DeletePeerRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'ListPeer': grpc.unary_stream_rpc_method_handler(
-                    servicer.ListPeer,
-                    request_deserializer=gobgp__pb2.ListPeerRequest.FromString,
-                    response_serializer=gobgp__pb2.ListPeerResponse.SerializeToString,
-            ),
-            'UpdatePeer': grpc.unary_unary_rpc_method_handler(
-                    servicer.UpdatePeer,
-                    request_deserializer=gobgp__pb2.UpdatePeerRequest.FromString,
-                    response_serializer=gobgp__pb2.UpdatePeerResponse.SerializeToString,
-            ),
-            'ResetPeer': grpc.unary_unary_rpc_method_handler(
-                    servicer.ResetPeer,
-                    request_deserializer=gobgp__pb2.ResetPeerRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'ShutdownPeer': grpc.unary_unary_rpc_method_handler(
-                    servicer.ShutdownPeer,
-                    request_deserializer=gobgp__pb2.ShutdownPeerRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'EnablePeer': grpc.unary_unary_rpc_method_handler(
-                    servicer.EnablePeer,
-                    request_deserializer=gobgp__pb2.EnablePeerRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'DisablePeer': grpc.unary_unary_rpc_method_handler(
-                    servicer.DisablePeer,
-                    request_deserializer=gobgp__pb2.DisablePeerRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'MonitorPeer': grpc.unary_stream_rpc_method_handler(
-                    servicer.MonitorPeer,
-                    request_deserializer=gobgp__pb2.MonitorPeerRequest.FromString,
-                    response_serializer=gobgp__pb2.MonitorPeerResponse.SerializeToString,
-            ),
-            'AddPeerGroup': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddPeerGroup,
-                    request_deserializer=gobgp__pb2.AddPeerGroupRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'DeletePeerGroup': grpc.unary_unary_rpc_method_handler(
-                    servicer.DeletePeerGroup,
-                    request_deserializer=gobgp__pb2.DeletePeerGroupRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'UpdatePeerGroup': grpc.unary_unary_rpc_method_handler(
-                    servicer.UpdatePeerGroup,
-                    request_deserializer=gobgp__pb2.UpdatePeerGroupRequest.FromString,
-                    response_serializer=gobgp__pb2.UpdatePeerGroupResponse.SerializeToString,
-            ),
-            'AddDynamicNeighbor': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddDynamicNeighbor,
-                    request_deserializer=gobgp__pb2.AddDynamicNeighborRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'AddPath': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddPath,
-                    request_deserializer=gobgp__pb2.AddPathRequest.FromString,
-                    response_serializer=gobgp__pb2.AddPathResponse.SerializeToString,
-            ),
-            'DeletePath': grpc.unary_unary_rpc_method_handler(
-                    servicer.DeletePath,
-                    request_deserializer=gobgp__pb2.DeletePathRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'ListPath': grpc.unary_stream_rpc_method_handler(
-                    servicer.ListPath,
-                    request_deserializer=gobgp__pb2.ListPathRequest.FromString,
-                    response_serializer=gobgp__pb2.ListPathResponse.SerializeToString,
-            ),
-            'AddPathStream': grpc.stream_unary_rpc_method_handler(
-                    servicer.AddPathStream,
-                    request_deserializer=gobgp__pb2.AddPathStreamRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'GetTable': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetTable,
-                    request_deserializer=gobgp__pb2.GetTableRequest.FromString,
-                    response_serializer=gobgp__pb2.GetTableResponse.SerializeToString,
-            ),
-            'MonitorTable': grpc.unary_stream_rpc_method_handler(
-                    servicer.MonitorTable,
-                    request_deserializer=gobgp__pb2.MonitorTableRequest.FromString,
-                    response_serializer=gobgp__pb2.MonitorTableResponse.SerializeToString,
-            ),
-            'AddVrf': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddVrf,
-                    request_deserializer=gobgp__pb2.AddVrfRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'DeleteVrf': grpc.unary_unary_rpc_method_handler(
-                    servicer.DeleteVrf,
-                    request_deserializer=gobgp__pb2.DeleteVrfRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'ListVrf': grpc.unary_stream_rpc_method_handler(
-                    servicer.ListVrf,
-                    request_deserializer=gobgp__pb2.ListVrfRequest.FromString,
-                    response_serializer=gobgp__pb2.ListVrfResponse.SerializeToString,
-            ),
-            'AddPolicy': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddPolicy,
-                    request_deserializer=gobgp__pb2.AddPolicyRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'DeletePolicy': grpc.unary_unary_rpc_method_handler(
-                    servicer.DeletePolicy,
-                    request_deserializer=gobgp__pb2.DeletePolicyRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'ListPolicy': grpc.unary_stream_rpc_method_handler(
-                    servicer.ListPolicy,
-                    request_deserializer=gobgp__pb2.ListPolicyRequest.FromString,
-                    response_serializer=gobgp__pb2.ListPolicyResponse.SerializeToString,
-            ),
-            'SetPolicies': grpc.unary_unary_rpc_method_handler(
-                    servicer.SetPolicies,
-                    request_deserializer=gobgp__pb2.SetPoliciesRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'AddDefinedSet': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddDefinedSet,
-                    request_deserializer=gobgp__pb2.AddDefinedSetRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'DeleteDefinedSet': grpc.unary_unary_rpc_method_handler(
-                    servicer.DeleteDefinedSet,
-                    request_deserializer=gobgp__pb2.DeleteDefinedSetRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'ListDefinedSet': grpc.unary_stream_rpc_method_handler(
-                    servicer.ListDefinedSet,
-                    request_deserializer=gobgp__pb2.ListDefinedSetRequest.FromString,
-                    response_serializer=gobgp__pb2.ListDefinedSetResponse.SerializeToString,
-            ),
-            'AddStatement': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddStatement,
-                    request_deserializer=gobgp__pb2.AddStatementRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'DeleteStatement': grpc.unary_unary_rpc_method_handler(
-                    servicer.DeleteStatement,
-                    request_deserializer=gobgp__pb2.DeleteStatementRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'ListStatement': grpc.unary_stream_rpc_method_handler(
-                    servicer.ListStatement,
-                    request_deserializer=gobgp__pb2.ListStatementRequest.FromString,
-                    response_serializer=gobgp__pb2.ListStatementResponse.SerializeToString,
-            ),
-            'AddPolicyAssignment': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddPolicyAssignment,
-                    request_deserializer=gobgp__pb2.AddPolicyAssignmentRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'DeletePolicyAssignment': grpc.unary_unary_rpc_method_handler(
-                    servicer.DeletePolicyAssignment,
-                    request_deserializer=gobgp__pb2.DeletePolicyAssignmentRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'ListPolicyAssignment': grpc.unary_stream_rpc_method_handler(
-                    servicer.ListPolicyAssignment,
-                    request_deserializer=gobgp__pb2.ListPolicyAssignmentRequest.FromString,
-                    response_serializer=gobgp__pb2.ListPolicyAssignmentResponse.SerializeToString,
-            ),
-            'SetPolicyAssignment': grpc.unary_unary_rpc_method_handler(
-                    servicer.SetPolicyAssignment,
-                    request_deserializer=gobgp__pb2.SetPolicyAssignmentRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'AddRpki': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddRpki,
-                    request_deserializer=gobgp__pb2.AddRpkiRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'DeleteRpki': grpc.unary_unary_rpc_method_handler(
-                    servicer.DeleteRpki,
-                    request_deserializer=gobgp__pb2.DeleteRpkiRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'ListRpki': grpc.unary_stream_rpc_method_handler(
-                    servicer.ListRpki,
-                    request_deserializer=gobgp__pb2.ListRpkiRequest.FromString,
-                    response_serializer=gobgp__pb2.ListRpkiResponse.SerializeToString,
-            ),
-            'EnableRpki': grpc.unary_unary_rpc_method_handler(
-                    servicer.EnableRpki,
-                    request_deserializer=gobgp__pb2.EnableRpkiRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'DisableRpki': grpc.unary_unary_rpc_method_handler(
-                    servicer.DisableRpki,
-                    request_deserializer=gobgp__pb2.DisableRpkiRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'ResetRpki': grpc.unary_unary_rpc_method_handler(
-                    servicer.ResetRpki,
-                    request_deserializer=gobgp__pb2.ResetRpkiRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'ListRpkiTable': grpc.unary_stream_rpc_method_handler(
-                    servicer.ListRpkiTable,
-                    request_deserializer=gobgp__pb2.ListRpkiTableRequest.FromString,
-                    response_serializer=gobgp__pb2.ListRpkiTableResponse.SerializeToString,
-            ),
-            'EnableZebra': grpc.unary_unary_rpc_method_handler(
-                    servicer.EnableZebra,
-                    request_deserializer=gobgp__pb2.EnableZebraRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'EnableMrt': grpc.unary_unary_rpc_method_handler(
-                    servicer.EnableMrt,
-                    request_deserializer=gobgp__pb2.EnableMrtRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'DisableMrt': grpc.unary_unary_rpc_method_handler(
-                    servicer.DisableMrt,
-                    request_deserializer=gobgp__pb2.DisableMrtRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'AddBmp': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddBmp,
-                    request_deserializer=gobgp__pb2.AddBmpRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'DeleteBmp': grpc.unary_unary_rpc_method_handler(
-                    servicer.DeleteBmp,
-                    request_deserializer=gobgp__pb2.DeleteBmpRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
-            'SetLogLevel': grpc.unary_unary_rpc_method_handler(
-                    servicer.SetLogLevel,
-                    request_deserializer=gobgp__pb2.SetLogLevelRequest.FromString,
-                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-            ),
+        "StartBgp": grpc.unary_unary_rpc_method_handler(
+            servicer.StartBgp,
+            request_deserializer=gobgp__pb2.StartBgpRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "StopBgp": grpc.unary_unary_rpc_method_handler(
+            servicer.StopBgp,
+            request_deserializer=gobgp__pb2.StopBgpRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "GetBgp": grpc.unary_unary_rpc_method_handler(
+            servicer.GetBgp,
+            request_deserializer=gobgp__pb2.GetBgpRequest.FromString,
+            response_serializer=gobgp__pb2.GetBgpResponse.SerializeToString,
+        ),
+        "AddPeer": grpc.unary_unary_rpc_method_handler(
+            servicer.AddPeer,
+            request_deserializer=gobgp__pb2.AddPeerRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "DeletePeer": grpc.unary_unary_rpc_method_handler(
+            servicer.DeletePeer,
+            request_deserializer=gobgp__pb2.DeletePeerRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "ListPeer": grpc.unary_stream_rpc_method_handler(
+            servicer.ListPeer,
+            request_deserializer=gobgp__pb2.ListPeerRequest.FromString,
+            response_serializer=gobgp__pb2.ListPeerResponse.SerializeToString,
+        ),
+        "UpdatePeer": grpc.unary_unary_rpc_method_handler(
+            servicer.UpdatePeer,
+            request_deserializer=gobgp__pb2.UpdatePeerRequest.FromString,
+            response_serializer=gobgp__pb2.UpdatePeerResponse.SerializeToString,
+        ),
+        "ResetPeer": grpc.unary_unary_rpc_method_handler(
+            servicer.ResetPeer,
+            request_deserializer=gobgp__pb2.ResetPeerRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "ShutdownPeer": grpc.unary_unary_rpc_method_handler(
+            servicer.ShutdownPeer,
+            request_deserializer=gobgp__pb2.ShutdownPeerRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "EnablePeer": grpc.unary_unary_rpc_method_handler(
+            servicer.EnablePeer,
+            request_deserializer=gobgp__pb2.EnablePeerRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "DisablePeer": grpc.unary_unary_rpc_method_handler(
+            servicer.DisablePeer,
+            request_deserializer=gobgp__pb2.DisablePeerRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "MonitorPeer": grpc.unary_stream_rpc_method_handler(
+            servicer.MonitorPeer,
+            request_deserializer=gobgp__pb2.MonitorPeerRequest.FromString,
+            response_serializer=gobgp__pb2.MonitorPeerResponse.SerializeToString,
+        ),
+        "AddPeerGroup": grpc.unary_unary_rpc_method_handler(
+            servicer.AddPeerGroup,
+            request_deserializer=gobgp__pb2.AddPeerGroupRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "DeletePeerGroup": grpc.unary_unary_rpc_method_handler(
+            servicer.DeletePeerGroup,
+            request_deserializer=gobgp__pb2.DeletePeerGroupRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "UpdatePeerGroup": grpc.unary_unary_rpc_method_handler(
+            servicer.UpdatePeerGroup,
+            request_deserializer=gobgp__pb2.UpdatePeerGroupRequest.FromString,
+            response_serializer=gobgp__pb2.UpdatePeerGroupResponse.SerializeToString,
+        ),
+        "AddDynamicNeighbor": grpc.unary_unary_rpc_method_handler(
+            servicer.AddDynamicNeighbor,
+            request_deserializer=gobgp__pb2.AddDynamicNeighborRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "AddPath": grpc.unary_unary_rpc_method_handler(
+            servicer.AddPath,
+            request_deserializer=gobgp__pb2.AddPathRequest.FromString,
+            response_serializer=gobgp__pb2.AddPathResponse.SerializeToString,
+        ),
+        "DeletePath": grpc.unary_unary_rpc_method_handler(
+            servicer.DeletePath,
+            request_deserializer=gobgp__pb2.DeletePathRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "ListPath": grpc.unary_stream_rpc_method_handler(
+            servicer.ListPath,
+            request_deserializer=gobgp__pb2.ListPathRequest.FromString,
+            response_serializer=gobgp__pb2.ListPathResponse.SerializeToString,
+        ),
+        "AddPathStream": grpc.stream_unary_rpc_method_handler(
+            servicer.AddPathStream,
+            request_deserializer=gobgp__pb2.AddPathStreamRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "GetTable": grpc.unary_unary_rpc_method_handler(
+            servicer.GetTable,
+            request_deserializer=gobgp__pb2.GetTableRequest.FromString,
+            response_serializer=gobgp__pb2.GetTableResponse.SerializeToString,
+        ),
+        "MonitorTable": grpc.unary_stream_rpc_method_handler(
+            servicer.MonitorTable,
+            request_deserializer=gobgp__pb2.MonitorTableRequest.FromString,
+            response_serializer=gobgp__pb2.MonitorTableResponse.SerializeToString,
+        ),
+        "AddVrf": grpc.unary_unary_rpc_method_handler(
+            servicer.AddVrf,
+            request_deserializer=gobgp__pb2.AddVrfRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "DeleteVrf": grpc.unary_unary_rpc_method_handler(
+            servicer.DeleteVrf,
+            request_deserializer=gobgp__pb2.DeleteVrfRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "ListVrf": grpc.unary_stream_rpc_method_handler(
+            servicer.ListVrf,
+            request_deserializer=gobgp__pb2.ListVrfRequest.FromString,
+            response_serializer=gobgp__pb2.ListVrfResponse.SerializeToString,
+        ),
+        "AddPolicy": grpc.unary_unary_rpc_method_handler(
+            servicer.AddPolicy,
+            request_deserializer=gobgp__pb2.AddPolicyRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "DeletePolicy": grpc.unary_unary_rpc_method_handler(
+            servicer.DeletePolicy,
+            request_deserializer=gobgp__pb2.DeletePolicyRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "ListPolicy": grpc.unary_stream_rpc_method_handler(
+            servicer.ListPolicy,
+            request_deserializer=gobgp__pb2.ListPolicyRequest.FromString,
+            response_serializer=gobgp__pb2.ListPolicyResponse.SerializeToString,
+        ),
+        "SetPolicies": grpc.unary_unary_rpc_method_handler(
+            servicer.SetPolicies,
+            request_deserializer=gobgp__pb2.SetPoliciesRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "AddDefinedSet": grpc.unary_unary_rpc_method_handler(
+            servicer.AddDefinedSet,
+            request_deserializer=gobgp__pb2.AddDefinedSetRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "DeleteDefinedSet": grpc.unary_unary_rpc_method_handler(
+            servicer.DeleteDefinedSet,
+            request_deserializer=gobgp__pb2.DeleteDefinedSetRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "ListDefinedSet": grpc.unary_stream_rpc_method_handler(
+            servicer.ListDefinedSet,
+            request_deserializer=gobgp__pb2.ListDefinedSetRequest.FromString,
+            response_serializer=gobgp__pb2.ListDefinedSetResponse.SerializeToString,
+        ),
+        "AddStatement": grpc.unary_unary_rpc_method_handler(
+            servicer.AddStatement,
+            request_deserializer=gobgp__pb2.AddStatementRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "DeleteStatement": grpc.unary_unary_rpc_method_handler(
+            servicer.DeleteStatement,
+            request_deserializer=gobgp__pb2.DeleteStatementRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "ListStatement": grpc.unary_stream_rpc_method_handler(
+            servicer.ListStatement,
+            request_deserializer=gobgp__pb2.ListStatementRequest.FromString,
+            response_serializer=gobgp__pb2.ListStatementResponse.SerializeToString,
+        ),
+        "AddPolicyAssignment": grpc.unary_unary_rpc_method_handler(
+            servicer.AddPolicyAssignment,
+            request_deserializer=gobgp__pb2.AddPolicyAssignmentRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "DeletePolicyAssignment": grpc.unary_unary_rpc_method_handler(
+            servicer.DeletePolicyAssignment,
+            request_deserializer=gobgp__pb2.DeletePolicyAssignmentRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "ListPolicyAssignment": grpc.unary_stream_rpc_method_handler(
+            servicer.ListPolicyAssignment,
+            request_deserializer=gobgp__pb2.ListPolicyAssignmentRequest.FromString,
+            response_serializer=gobgp__pb2.ListPolicyAssignmentResponse.SerializeToString,
+        ),
+        "SetPolicyAssignment": grpc.unary_unary_rpc_method_handler(
+            servicer.SetPolicyAssignment,
+            request_deserializer=gobgp__pb2.SetPolicyAssignmentRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "AddRpki": grpc.unary_unary_rpc_method_handler(
+            servicer.AddRpki,
+            request_deserializer=gobgp__pb2.AddRpkiRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "DeleteRpki": grpc.unary_unary_rpc_method_handler(
+            servicer.DeleteRpki,
+            request_deserializer=gobgp__pb2.DeleteRpkiRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "ListRpki": grpc.unary_stream_rpc_method_handler(
+            servicer.ListRpki,
+            request_deserializer=gobgp__pb2.ListRpkiRequest.FromString,
+            response_serializer=gobgp__pb2.ListRpkiResponse.SerializeToString,
+        ),
+        "EnableRpki": grpc.unary_unary_rpc_method_handler(
+            servicer.EnableRpki,
+            request_deserializer=gobgp__pb2.EnableRpkiRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "DisableRpki": grpc.unary_unary_rpc_method_handler(
+            servicer.DisableRpki,
+            request_deserializer=gobgp__pb2.DisableRpkiRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "ResetRpki": grpc.unary_unary_rpc_method_handler(
+            servicer.ResetRpki,
+            request_deserializer=gobgp__pb2.ResetRpkiRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "ListRpkiTable": grpc.unary_stream_rpc_method_handler(
+            servicer.ListRpkiTable,
+            request_deserializer=gobgp__pb2.ListRpkiTableRequest.FromString,
+            response_serializer=gobgp__pb2.ListRpkiTableResponse.SerializeToString,
+        ),
+        "EnableZebra": grpc.unary_unary_rpc_method_handler(
+            servicer.EnableZebra,
+            request_deserializer=gobgp__pb2.EnableZebraRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "EnableMrt": grpc.unary_unary_rpc_method_handler(
+            servicer.EnableMrt,
+            request_deserializer=gobgp__pb2.EnableMrtRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "DisableMrt": grpc.unary_unary_rpc_method_handler(
+            servicer.DisableMrt,
+            request_deserializer=gobgp__pb2.DisableMrtRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "AddBmp": grpc.unary_unary_rpc_method_handler(
+            servicer.AddBmp,
+            request_deserializer=gobgp__pb2.AddBmpRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "DeleteBmp": grpc.unary_unary_rpc_method_handler(
+            servicer.DeleteBmp,
+            request_deserializer=gobgp__pb2.DeleteBmpRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
+        "SetLogLevel": grpc.unary_unary_rpc_method_handler(
+            servicer.SetLogLevel,
+            request_deserializer=gobgp__pb2.SetLogLevelRequest.FromString,
+            response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'gobgpapi.GobgpApi', rpc_method_handlers)
+        "gobgpapi.GobgpApi", rpc_method_handlers
+    )
     server.add_generic_rpc_handlers((generic_handler,))
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class GobgpApi(object):
-    """Interface exported by the server.
-
-    """
+    """Interface exported by the server."""
 
     @staticmethod
-    def StartBgp(request,
+    def StartBgp(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/StartBgp',
+            "/gobgpapi.GobgpApi/StartBgp",
             gobgp__pb2.StartBgpRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def StopBgp(request,
+    def StopBgp(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/StopBgp',
+            "/gobgpapi.GobgpApi/StopBgp",
             gobgp__pb2.StopBgpRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def GetBgp(request,
+    def GetBgp(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/GetBgp',
+            "/gobgpapi.GobgpApi/GetBgp",
             gobgp__pb2.GetBgpRequest.SerializeToString,
             gobgp__pb2.GetBgpResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def AddPeer(request,
+    def AddPeer(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/AddPeer',
+            "/gobgpapi.GobgpApi/AddPeer",
             gobgp__pb2.AddPeerRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def DeletePeer(request,
+    def DeletePeer(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/DeletePeer',
+            "/gobgpapi.GobgpApi/DeletePeer",
             gobgp__pb2.DeletePeerRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def ListPeer(request,
+    def ListPeer(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_stream(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/gobgpapi.GobgpApi/ListPeer',
+            "/gobgpapi.GobgpApi/ListPeer",
             gobgp__pb2.ListPeerRequest.SerializeToString,
             gobgp__pb2.ListPeerResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def UpdatePeer(request,
+    def UpdatePeer(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/UpdatePeer',
+            "/gobgpapi.GobgpApi/UpdatePeer",
             gobgp__pb2.UpdatePeerRequest.SerializeToString,
             gobgp__pb2.UpdatePeerResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def ResetPeer(request,
+    def ResetPeer(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/ResetPeer',
+            "/gobgpapi.GobgpApi/ResetPeer",
             gobgp__pb2.ResetPeerRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def ShutdownPeer(request,
+    def ShutdownPeer(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/ShutdownPeer',
+            "/gobgpapi.GobgpApi/ShutdownPeer",
             gobgp__pb2.ShutdownPeerRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def EnablePeer(request,
+    def EnablePeer(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/EnablePeer',
+            "/gobgpapi.GobgpApi/EnablePeer",
             gobgp__pb2.EnablePeerRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def DisablePeer(request,
+    def DisablePeer(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/DisablePeer',
+            "/gobgpapi.GobgpApi/DisablePeer",
             gobgp__pb2.DisablePeerRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def MonitorPeer(request,
+    def MonitorPeer(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_stream(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/gobgpapi.GobgpApi/MonitorPeer',
+            "/gobgpapi.GobgpApi/MonitorPeer",
             gobgp__pb2.MonitorPeerRequest.SerializeToString,
             gobgp__pb2.MonitorPeerResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def AddPeerGroup(request,
+    def AddPeerGroup(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/AddPeerGroup',
+            "/gobgpapi.GobgpApi/AddPeerGroup",
             gobgp__pb2.AddPeerGroupRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def DeletePeerGroup(request,
+    def DeletePeerGroup(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/DeletePeerGroup',
+            "/gobgpapi.GobgpApi/DeletePeerGroup",
             gobgp__pb2.DeletePeerGroupRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def UpdatePeerGroup(request,
+    def UpdatePeerGroup(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/UpdatePeerGroup',
+            "/gobgpapi.GobgpApi/UpdatePeerGroup",
             gobgp__pb2.UpdatePeerGroupRequest.SerializeToString,
             gobgp__pb2.UpdatePeerGroupResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def AddDynamicNeighbor(request,
+    def AddDynamicNeighbor(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/AddDynamicNeighbor',
+            "/gobgpapi.GobgpApi/AddDynamicNeighbor",
             gobgp__pb2.AddDynamicNeighborRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def AddPath(request,
+    def AddPath(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/AddPath',
+            "/gobgpapi.GobgpApi/AddPath",
             gobgp__pb2.AddPathRequest.SerializeToString,
             gobgp__pb2.AddPathResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def DeletePath(request,
+    def DeletePath(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/DeletePath',
+            "/gobgpapi.GobgpApi/DeletePath",
             gobgp__pb2.DeletePathRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def ListPath(request,
+    def ListPath(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_stream(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/gobgpapi.GobgpApi/ListPath',
+            "/gobgpapi.GobgpApi/ListPath",
             gobgp__pb2.ListPathRequest.SerializeToString,
             gobgp__pb2.ListPathResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def AddPathStream(request_iterator,
+    def AddPathStream(
+        request_iterator,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.stream_unary(
+            request_iterator,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.stream_unary(request_iterator, target, '/gobgpapi.GobgpApi/AddPathStream',
+            "/gobgpapi.GobgpApi/AddPathStream",
             gobgp__pb2.AddPathStreamRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def GetTable(request,
+    def GetTable(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/GetTable',
+            "/gobgpapi.GobgpApi/GetTable",
             gobgp__pb2.GetTableRequest.SerializeToString,
             gobgp__pb2.GetTableResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def MonitorTable(request,
+    def MonitorTable(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_stream(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/gobgpapi.GobgpApi/MonitorTable',
+            "/gobgpapi.GobgpApi/MonitorTable",
             gobgp__pb2.MonitorTableRequest.SerializeToString,
             gobgp__pb2.MonitorTableResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def AddVrf(request,
+    def AddVrf(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/AddVrf',
+            "/gobgpapi.GobgpApi/AddVrf",
             gobgp__pb2.AddVrfRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def DeleteVrf(request,
+    def DeleteVrf(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/DeleteVrf',
+            "/gobgpapi.GobgpApi/DeleteVrf",
             gobgp__pb2.DeleteVrfRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def ListVrf(request,
+    def ListVrf(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_stream(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/gobgpapi.GobgpApi/ListVrf',
+            "/gobgpapi.GobgpApi/ListVrf",
             gobgp__pb2.ListVrfRequest.SerializeToString,
             gobgp__pb2.ListVrfResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def AddPolicy(request,
+    def AddPolicy(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/AddPolicy',
+            "/gobgpapi.GobgpApi/AddPolicy",
             gobgp__pb2.AddPolicyRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def DeletePolicy(request,
+    def DeletePolicy(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/DeletePolicy',
+            "/gobgpapi.GobgpApi/DeletePolicy",
             gobgp__pb2.DeletePolicyRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def ListPolicy(request,
+    def ListPolicy(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_stream(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/gobgpapi.GobgpApi/ListPolicy',
+            "/gobgpapi.GobgpApi/ListPolicy",
             gobgp__pb2.ListPolicyRequest.SerializeToString,
             gobgp__pb2.ListPolicyResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def SetPolicies(request,
+    def SetPolicies(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/SetPolicies',
+            "/gobgpapi.GobgpApi/SetPolicies",
             gobgp__pb2.SetPoliciesRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def AddDefinedSet(request,
+    def AddDefinedSet(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/AddDefinedSet',
+            "/gobgpapi.GobgpApi/AddDefinedSet",
             gobgp__pb2.AddDefinedSetRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def DeleteDefinedSet(request,
+    def DeleteDefinedSet(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/DeleteDefinedSet',
+            "/gobgpapi.GobgpApi/DeleteDefinedSet",
             gobgp__pb2.DeleteDefinedSetRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def ListDefinedSet(request,
+    def ListDefinedSet(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_stream(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/gobgpapi.GobgpApi/ListDefinedSet',
+            "/gobgpapi.GobgpApi/ListDefinedSet",
             gobgp__pb2.ListDefinedSetRequest.SerializeToString,
             gobgp__pb2.ListDefinedSetResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def AddStatement(request,
+    def AddStatement(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/AddStatement',
+            "/gobgpapi.GobgpApi/AddStatement",
             gobgp__pb2.AddStatementRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def DeleteStatement(request,
+    def DeleteStatement(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/DeleteStatement',
+            "/gobgpapi.GobgpApi/DeleteStatement",
             gobgp__pb2.DeleteStatementRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def ListStatement(request,
+    def ListStatement(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_stream(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/gobgpapi.GobgpApi/ListStatement',
+            "/gobgpapi.GobgpApi/ListStatement",
             gobgp__pb2.ListStatementRequest.SerializeToString,
             gobgp__pb2.ListStatementResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def AddPolicyAssignment(request,
+    def AddPolicyAssignment(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/AddPolicyAssignment',
+            "/gobgpapi.GobgpApi/AddPolicyAssignment",
             gobgp__pb2.AddPolicyAssignmentRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def DeletePolicyAssignment(request,
+    def DeletePolicyAssignment(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/DeletePolicyAssignment',
+            "/gobgpapi.GobgpApi/DeletePolicyAssignment",
             gobgp__pb2.DeletePolicyAssignmentRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def ListPolicyAssignment(request,
+    def ListPolicyAssignment(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_stream(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/gobgpapi.GobgpApi/ListPolicyAssignment',
+            "/gobgpapi.GobgpApi/ListPolicyAssignment",
             gobgp__pb2.ListPolicyAssignmentRequest.SerializeToString,
             gobgp__pb2.ListPolicyAssignmentResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def SetPolicyAssignment(request,
+    def SetPolicyAssignment(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/SetPolicyAssignment',
+            "/gobgpapi.GobgpApi/SetPolicyAssignment",
             gobgp__pb2.SetPolicyAssignmentRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def AddRpki(request,
+    def AddRpki(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/AddRpki',
+            "/gobgpapi.GobgpApi/AddRpki",
             gobgp__pb2.AddRpkiRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def DeleteRpki(request,
+    def DeleteRpki(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/DeleteRpki',
+            "/gobgpapi.GobgpApi/DeleteRpki",
             gobgp__pb2.DeleteRpkiRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def ListRpki(request,
+    def ListRpki(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_stream(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/gobgpapi.GobgpApi/ListRpki',
+            "/gobgpapi.GobgpApi/ListRpki",
             gobgp__pb2.ListRpkiRequest.SerializeToString,
             gobgp__pb2.ListRpkiResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def EnableRpki(request,
+    def EnableRpki(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/EnableRpki',
+            "/gobgpapi.GobgpApi/EnableRpki",
             gobgp__pb2.EnableRpkiRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def DisableRpki(request,
+    def DisableRpki(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/DisableRpki',
+            "/gobgpapi.GobgpApi/DisableRpki",
             gobgp__pb2.DisableRpkiRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def ResetRpki(request,
+    def ResetRpki(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/ResetRpki',
+            "/gobgpapi.GobgpApi/ResetRpki",
             gobgp__pb2.ResetRpkiRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def ListRpkiTable(request,
+    def ListRpkiTable(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_stream(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/gobgpapi.GobgpApi/ListRpkiTable',
+            "/gobgpapi.GobgpApi/ListRpkiTable",
             gobgp__pb2.ListRpkiTableRequest.SerializeToString,
             gobgp__pb2.ListRpkiTableResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def EnableZebra(request,
+    def EnableZebra(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/EnableZebra',
+            "/gobgpapi.GobgpApi/EnableZebra",
             gobgp__pb2.EnableZebraRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def EnableMrt(request,
+    def EnableMrt(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/EnableMrt',
+            "/gobgpapi.GobgpApi/EnableMrt",
             gobgp__pb2.EnableMrtRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def DisableMrt(request,
+    def DisableMrt(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/DisableMrt',
+            "/gobgpapi.GobgpApi/DisableMrt",
             gobgp__pb2.DisableMrtRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def AddBmp(request,
+    def AddBmp(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/AddBmp',
+            "/gobgpapi.GobgpApi/AddBmp",
             gobgp__pb2.AddBmpRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def DeleteBmp(request,
+    def DeleteBmp(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/DeleteBmp',
+            "/gobgpapi.GobgpApi/DeleteBmp",
             gobgp__pb2.DeleteBmpRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
 
     @staticmethod
-    def SetLogLevel(request,
+    def SetLogLevel(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
+        return grpc.experimental.unary_unary(
+            request,
             target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/gobgpapi.GobgpApi/SetLogLevel',
+            "/gobgpapi.GobgpApi/SetLogLevel",
             gobgp__pb2.SetLogLevelRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+        )
