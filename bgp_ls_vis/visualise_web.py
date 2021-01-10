@@ -17,14 +17,16 @@ def main():
 
     elements = [
         # The nodes elements
-        {'data': {'id': 'one', 'label': 'Node 1'},},
-        {'data': {'id': 'two', 'label': 'Node 2'},},
+        {'data': {'id': 'one', 'label': 'Node 1'}, },
+        {'data': {'id': 'two', 'label': 'Node 2'}, },
 
         # The edge elements
         {'data': {'source': 'one', 'target': 'two', 'label': 'Node 1 to 2'}}
     ]
 
     lsdb = rpc.get_lsdb()
+
+    print(yaml.dump(rpc.debug()))
 
     mad_shit = graphing.build_nx_from_lsdb(lsdb)
 
@@ -34,15 +36,11 @@ def main():
         even_madder_shit.append(
             {'data': {'id': node, 'label': node}, },
         )
-        print(node)
 
     for edge in mad_shit.edges():
-        pprint(edge)
         even_madder_shit.append(
             {'data': {'source': edge[0], 'target': edge[1], 'label': f"{edge[0]} to {edge[1]}"}}
         )
-
-
 
     app = dash.Dash(__name__)
     app.layout = html.Div(
@@ -52,7 +50,7 @@ def main():
                 id="cytoscape",
                 elements=even_madder_shit,
                 layout={'name': 'breadthfirst'},
-                # style={'width': '400px', 'height': '500px'}
+                style={'width': '1024px', 'height': '768px'}
             ),
         ]
     )
