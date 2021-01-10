@@ -82,7 +82,7 @@ neighbors:
 
 * `graphing.draw_pyplot_graph`  draws the following
 
-![](https://i.imgur.com/K9Cq3NK.png)
+![](https://i.imgur.com/SgMlRZO.png)
 
 * `graphing.draw_graphviz_graph` draws the following
 
