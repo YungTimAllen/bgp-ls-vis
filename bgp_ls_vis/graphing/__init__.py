@@ -19,10 +19,8 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
             graph.add_edge(
                 lsa["localNode"]["igpRouterId"],
                 lsa["remoteNode"]["igpRouterId"],
-                color="red",
                 cost=lsa["lsattribute"]["link"]["igpMetric"],
             )
-        # if lsa['type'] == "Prefix":
 
     return graph
 
