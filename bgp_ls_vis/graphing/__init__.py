@@ -69,7 +69,10 @@ def draw_pyplot_graph(graph: nx.Graph):
         else:
             color_map.append("green")
 
-    edge_labels = {(u, v): d["cost"] for u, v, d in graph.edges(data=True)}
+    edge_labels = {
+        (u, v): d["cost"] if d["cost"] > 0 else ""
+        for u, v, d in graph.edges(data=True)
+    }
 
     pos = nx.spring_layout(graph)
     nx.draw(graph, pos, node_color=color_map, with_labels=True, font_size=7)
