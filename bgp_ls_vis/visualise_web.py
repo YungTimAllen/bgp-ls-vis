@@ -15,34 +15,28 @@ def main():
     """First method called when ran as script"""
     rpc = GoBGPQueryWrapper("192.168.242.132", "50051")
 
-    elements = [
-        # The nodes elements
-        {'data': {'id': 'one', 'label': 'Node 1'},},
-        {'data': {'id': 'two', 'label': 'Node 2'},},
-
-        # The edge elements
-        {'data': {'source': 'one', 'target': 'two', 'label': 'Node 1 to 2'}}
-    ]
-
     lsdb = rpc.get_lsdb()
 
-    mad_shit = graphing.build_nx_from_lsdb(lsdb)
+    nx_graph = graphing.build_nx_from_lsdb(lsdb)
 
-    even_madder_shit = []
+    elements = []
 
-    for node in mad_shit.nodes():
-        even_madder_shit.append(
-            {'data': {'id': node, 'label': node}, },
+    for node in nx_graph.nodes():
+        elements.append(
+            {
+                "data": {"id": node, "label": node},
+            },
         )
-        print(node)
-
-    for edge in mad_shit.edges():
-        pprint(edge)
-        even_madder_shit.append(
-            {'data': {'source': edge[0], 'target': edge[1], 'label': f"{edge[0]} to {edge[1]}"}}
+    for source_edge, target_edge in nx_graph.edges():
+        elements.append(
+            {
+                "data": {
+                    "source": source_edge,
+                    "target": target_edge,
+                    "cost": nx_graph[source_edge][target_edge][0]["cost"],
+                }
+            }
         )
-
-
 
     app = dash.Dash(__name__)
     app.layout = html.Div(
@@ -50,9 +44,25 @@ def main():
             html.P("Mad topology:"),
             cyto.Cytoscape(
                 id="cytoscape",
-                elements=even_madder_shit,
-                layout={'name': 'breadthfirst'},
-                # style={'width': '400px', 'height': '500px'}
+                elements=elements,
+                layout={"name": "cose"},
+                style={
+                    "width": "100%",
+                    "height": "700px",
+                },
+                stylesheet=[
+                    {
+                        "selector": "node",
+                        "style": {"label": "data(id)"},
+                    },
+                    {
+                        "selector": "edge",
+                        "style": {
+                            "source-label": "data(cost)",
+                            "source-text-offset": 40,
+                        },
+                    },
+                ],
             ),
         ]
     )
