@@ -11,10 +11,6 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
 
     Returns:
         NetworkX MultiDiGraph object
-
-    Requires:
-        redhat: graphviz-devel python3-dev graphviz pkg-config
-        debian: python3-dev graphviz libgraphviz-dev pkg-config
     """
     graph = nx.MultiDiGraph()
 
@@ -28,10 +24,8 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
             graph.add_edge(
                 lsa["localNode"]["igpRouterId"],
                 lsa["remoteNode"]["igpRouterId"],
-                color="red",
                 cost=lsa_cost(lsa),
             )
-        # if lsa['type'] == "Prefix":
 
     return graph
 
@@ -43,6 +37,9 @@ def draw_pyplot_graph(graph: nx.Graph):
 
     Args:
         graph: NetworkX Graph object, or derivative
+
+    Requires:
+        import matplotlib.pyplot as plt
     """
     edge_labels = {(u, v): d["cost"] for u, v, d in graph.edges(data=True)}
     pos = nx.spring_layout(graph)
@@ -54,11 +51,15 @@ def draw_pyplot_graph(graph: nx.Graph):
 
 
 def draw_graphviz_graph(graph: nx.Graph, outfile: str):
-    """
+    """Draws NetworkX graph object to file using Graphviz
+
     Args:
         graph: NetworkX Graph object, or derivative
+
     Requires:
         pip3 install pygraphviz
+        redhat: graphviz-devel python3-dev graphviz pkg-config
+        debian: python3-dev graphviz libgraphviz-dev pkg-config
     """
 
     # Weight labels
