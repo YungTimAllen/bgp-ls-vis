@@ -14,6 +14,8 @@ You can start at the file `bgp_ls_vis/scratch2.py`
 
 ## Requirements and Resources
 
+`pip install -r requirements.txt`
+
 * [NetworkX](https://networkx.org/) + matplotlib (`graphing.draw_pyplot_graph`)
 
 ```buildoutcfg
