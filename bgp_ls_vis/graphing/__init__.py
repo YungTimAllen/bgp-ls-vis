@@ -21,6 +21,13 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
     graph = nx.MultiDiGraph()
 
     for lsa in lsdb:
+        if lsa["type"] == "Node":
+            b_pseudonode = False
+            if "pseudonode" in lsa["localNode"].keys():
+                b_pseudonode = lsa["localNode"]["pseudonode"]
+            graph.add_node(lsa["localNode"]["igpRouterId"], pseudonode=b_pseudonode)
+
+    for lsa in lsdb:
         if lsa["type"] == "Link":
             graph.add_edge(
                 lsa["localNode"]["igpRouterId"],
