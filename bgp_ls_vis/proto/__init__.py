@@ -24,6 +24,7 @@ class GoBGPQueryWrapper:
         Args:
             target_ipv4_address: Management IPv4 Address of GoBGP instance
             target_rpc_port: Management Port of GoBGP Instance
+            connect: When set false, will not build grpc channel or api stub objects
         """
         if connect:
             channel = grpc.insecure_channel(f"{target_ipv4_address}:{target_rpc_port}")
