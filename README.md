@@ -6,15 +6,33 @@
 PoC collection of scripts and modules that perform the following
 
 1. Connects via gRPC to a running GoBGP instance and submits a query for the contents of the BGP-LS table
+   * or, loads from file a cached BGP-LS table (To dump, `proto.GoBGPQueryWrapper.debug()`)
 2. Filters the returned structured data for only those values which are useful and required
 3. Builds a NetworkX graph object representative of the NLRI extracted
 4. Draws visual representation of said NetworkX graph object to screen or file
 
-You can start at the file `bgp_ls_vis/scratch2.py`
+## Minimal Example
+
+```python
+# RPC tools
+from proto import GoBGPQueryWrapper
+# Graphing tools
+import graphing
+
+gobgp_target = {"target_ipv4_address": "172.20.10.2", "target_rpc_port": 50051}
+rpc = GoBGPQueryWrapper(**gobgp_target)
+
+lsdb = rpc.get_lsdb()
+graph = graphing.build_nx_from_lsdb(lsdb)
+
+graphing.draw_pyplot_graph(graph)
+```
 
 ## Requirements and Resources
 
 `pip install -r requirements.txt`
+
+---
 
 * [NetworkX](https://networkx.org/) + matplotlib (`graphing.draw_pyplot_graph`)
 
@@ -50,19 +68,23 @@ Because we can, and it's fun
 
 ## Lab & Testing Topology
 
-The topology used in labs and testing is described by the YAML file `tests/lab_topology.yaml`
-
 ### Networking
 
-The topology is running ISIS, and peers with BGP-LS to the Ubuntu guest running GoBGP.
+Testing topologies are running ISIS, and 1 node peers with BGP-LS to the Ubuntu guest running GoBGP.
 
-* Cloud 1 is a breakout for the virtual environment, allowing RPC calls from the real-world.
-* All nodes are running IOS-Classic, and only ISIS (Except R2 which is IOS-XE).
-* R2 has an iBGP peering for `address-family link-state link-state` (BGP-LS) to the GoBGP instance.
+* Clouds are a breakout for the virtual environment, allowing RPC calls from the real-world.
+* All nodes must support ISIS, but only the node peering to the GoBGP systems needs to support and peer BGP-LS
+  * e.g Only R2 has an iBGP peering for `address-family link-state link-state` (BGP-LS) to the GoBGP instance.
 
-![Lab Topology](https://i.imgur.com/H9x8ash.png)
+![Lab Topology 1](https://i.imgur.com/H9x8ash.png)
 
-### GoBGP
+*This topology is described under `tests/lab_topology_definitions/lab_topology.yaml`*
+
+![Lab Topology 2](https://i.imgur.com/Zh4pD1R.png)
+
+*This topology is described under `tests/lab_topology_definitions/18-node-topology.yaml`*
+
+### GoBGP 
 
 GoBGP configuration file is defined by the following YAML
 
@@ -83,15 +105,21 @@ neighbors:
       afi-safi-name: ls
 ```
 
+---
+
 ## Progress so far:
 
-* `graphing.draw_pyplot_graph`  draws the following
+- Supports loading BGP-LS table dumps from file, an alternative to RPC connections
+- Resolves ISIS TLV 137 for actual hostnames
+- Supports Psuedonodes
 
-![](https://i.imgur.com/SgMlRZO.png)
+`graphing.draw_pyplot_graph` for BGP-LS table dump `tests/junos_bgpls_nopsn.yml` draws the following
 
-* `graphing.draw_graphviz_graph` draws the following
+![](https://i.imgur.com/ctltjR8.png)
 
-![](https://i.imgur.com/LOJMSyZ.png)
+`graphing.draw_pyplot_graph` for BGP-LS table dump `tests/18-node-isis-w-bcast-segment.yaml` draws the following
+
+![](https://i.imgur.com/GBv0tN9.png)
 
 ## Contributors
 
