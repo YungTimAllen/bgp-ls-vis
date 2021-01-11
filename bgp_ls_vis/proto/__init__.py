@@ -74,9 +74,9 @@ class GoBGPQueryWrapper:
         provides a concise structure of LSAs.
 
         Returns:
-            List of Link and Prefix dict objects, filtered for only relevent key-value pairs
+            List of dict objects, representing Link Prefix and Node LSAs
         """
-        brib = (
+        b_rib = (
             self.__get_bgp_ls_table()
             if not filename
             else yaml.load(open(filename, "r"), Loader=yaml.Loader)
@@ -84,7 +84,7 @@ class GoBGPQueryWrapper:
 
         filtered_lsdb = []
 
-        for lsa in brib:
+        for lsa in b_rib:
 
             best_path = [p for p in lsa["destination"]["paths"] if p["best"]][0]
 
