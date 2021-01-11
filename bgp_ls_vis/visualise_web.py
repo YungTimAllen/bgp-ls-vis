@@ -20,20 +20,11 @@ def main():
     nx_graph = graphing.build_nx_from_lsdb(lsdb)
 
     elements = []
-    #pprint(lsdb)
-    for lsa in lsdb:
-        pprint(lsa)
-        print("====================")
-    print(yaml.dump(nx_graph.nodes()))
+
     for node in nx_graph.nodes():
-        node_label = node
-        for lsa in lsdb:
-            if lsa["localNode"]["igpRouterId"] == node and lsa["lsattribute"]["node"]:
-                #print(f"{node}   {lsa['lsattribute']['node']}")
-                node_label = lsa['lsattribute']['node']['name']
         elements.append(
             {
-                "data": {"id": node, "label": node_label},
+                "data": {"id": node, "label": node},
             },
         )
     for source_edge, target_edge in nx_graph.edges():
