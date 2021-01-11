@@ -64,7 +64,7 @@ def draw_pyplot_graph(graph: nx.Graph):
     # This is the same order nx.draw encounters nodes
     color_map = []
     for node in graph:
-        if pns[node]:  # If node is a pseudonode ...
+        if node in list(pns.keys()):  # If node is a pseudonode ...
             color_map.append("blue")
         else:
             color_map.append("green")
