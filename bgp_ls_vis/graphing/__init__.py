@@ -44,6 +44,19 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
                 pseudonode="pseudonode" in lsa["remoteNode"].keys(),
             )
 
+    # Node type LSAs might have the node's true name (TLV137) under lsattrs
+    # so we prep a rename map (Dict where key: old name, val: new name)
+    # and call nx.relabel_nodes for the current graph, where `copy=false` renames in-place
+    new_name_map = {}
+    for lsa in lsdb:
+        if lsa["type"] == "Node":
+            if lsa["lsattribute"]["node"]:
+                if "name" in list(lsa["lsattribute"]["node"].keys()):
+                    old_name = lsa["localNode"]["igpRouterId"]
+                    new_name = lsa["lsattribute"]["node"]["name"]
+                    new_name_map[old_name] = new_name
+    nx.relabel_nodes(graph, new_name_map, copy=False)
+
     return graph
 
 
@@ -64,12 +77,18 @@ def draw_pyplot_graph(graph: nx.Graph):
     # This is the same order nx.draw encounters nodes
     color_map = []
     for node in graph:
-        if pns[node]:  # If node is a pseudonode ...
-            color_map.append("blue")
+        if node in list(pns.keys()):
+            if pns[node]:
+                # If node is a pseudonode ...
+                color_map.append("blue")
+            else:
+                color_map.append("green")
         else:
             color_map.append("green")
 
-    edge_labels = {(u, v): d["cost"] for u, v, d in graph.edges(data=True)}
+    edge_labels = {
+        (u, v): d["cost"] if d["cost"] > 0 else "" for u, v, d in graph.edges(data=True)
+    }
 
     pos = nx.spring_layout(graph)
     nx.draw(graph, pos, node_color=color_map, with_labels=True, font_size=7)
