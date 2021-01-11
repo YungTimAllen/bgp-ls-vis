@@ -20,11 +20,20 @@ def main():
     nx_graph = graphing.build_nx_from_lsdb(lsdb)
 
     elements = []
-
+    #pprint(lsdb)
+    for lsa in lsdb:
+        pprint(lsa)
+        print("====================")
+    print(yaml.dump(nx_graph.nodes()))
     for node in nx_graph.nodes():
+        node_label = node
+        for lsa in lsdb:
+            if lsa["localNode"]["igpRouterId"] == node and lsa["lsattribute"]["node"]:
+                #print(f"{node}   {lsa['lsattribute']['node']}")
+                node_label = lsa['lsattribute']['node']['name']
         elements.append(
             {
-                "data": {"id": node, "label": node},
+                "data": {"id": node, "label": node_label},
             },
         )
     for source_edge, target_edge in nx_graph.edges():
@@ -45,21 +54,35 @@ def main():
             cyto.Cytoscape(
                 id="cytoscape",
                 elements=elements,
-                layout={"name": "cose"},
+                layout={
+                    "name": "cose",
+                    "componentSpacing": 20,
+                },
                 style={
                     "width": "100%",
-                    "height": "700px",
+                    'height': '100%',
+                    'position': 'absolute',
+                    'left': 0,
+                    'top': 0,
+                    'z-index': 999,
                 },
                 stylesheet=[
                     {
                         "selector": "node",
-                        "style": {"label": "data(id)"},
+                        "style": {
+                            "label": "data(label)",
+                            "text-halign": "center",
+                            "text-valign": "center",
+                            "background-color": "#4272f5",
+                            "padding": 20,
+                        },
                     },
                     {
                         "selector": "edge",
                         "style": {
                             "source-label": "data(cost)",
-                            "source-text-offset": 40,
+                            "source-text-offset": 45,
+                            "width": "2%"
                         },
                     },
                 ],
