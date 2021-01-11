@@ -35,6 +35,7 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
                 b_pseudonode = lsa["localNode"]["pseudonode"]
             graph.add_node(lsa["localNode"]["igpRouterId"], pseudonode=b_pseudonode)
 
+    new_name_map = {}
     for lsa in lsdb:
         if lsa["type"] == "Link":
             graph.add_edge(
@@ -43,12 +44,9 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
                 cost=lsa_cost(lsa),
                 pseudonode="pseudonode" in lsa["remoteNode"].keys(),
             )
-
-    # Node type LSAs might have the node's true name (TLV137) under lsattrs
-    # so we prep a rename map (Dict where key: old name, val: new name)
-    # and call nx.relabel_nodes for the current graph, where `copy=false` renames in-place
-    new_name_map = {}
-    for lsa in lsdb:
+        # Node type LSAs might have the node's true name (TLV137) under lsattrs
+        # so we prep a rename map (Dict where key: old name, val: new name)
+        # and call nx.relabel_nodes for the current graph, where `copy=false` renames in-place
         if lsa["type"] == "Node":
             if lsa["lsattribute"]["node"]:
                 if "name" in list(lsa["lsattribute"]["node"].keys()):
