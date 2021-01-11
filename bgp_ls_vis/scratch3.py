@@ -11,7 +11,8 @@ def main():
     rpc = GoBGPQueryWrapper(connect=False)
 
     #lsdb = rpc.get_lsdb(filename="../tests/solar_table.yaml")
-    lsdb = rpc.get_lsdb(filename="../tests/junos_bgpls_nopsn.yml")
+    #lsdb = rpc.get_lsdb(filename="../tests/junos_bgpls_nopsn.yml")
+    lsdb = rpc.get_lsdb(filename="../tests/18-node-isis-w-bcast-segment.yaml")
     graph = graphing.build_nx_from_lsdb(lsdb)
 
     print(yaml.dump(lsdb))
