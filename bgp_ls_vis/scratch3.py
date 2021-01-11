@@ -10,7 +10,8 @@ def main():
     """First method called when ran as script"""
     rpc = GoBGPQueryWrapper(connect=False)
 
-    lsdb = rpc.get_lsdb(filename="proto/solar_table.yaml")
+    #lsdb = rpc.get_lsdb(filename="../tests/solar_table.yaml")
+    lsdb = rpc.get_lsdb(filename="../tests/junos_bgpls_nopsn.yml")
     graph = graphing.build_nx_from_lsdb(lsdb)
 
     print(yaml.dump(lsdb))
