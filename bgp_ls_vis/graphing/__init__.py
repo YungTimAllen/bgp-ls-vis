@@ -117,16 +117,10 @@ def draw_pyplot_graph(graph: nx.Graph):
     pns = {v: d["pseudonode"] for _, v, d in graph.edges(data=True)}
     # color_map is an ordered list, where order is for `node in graph`
     # This is the same order nx.draw encounters nodes
-    color_map = []
-    for node in graph:
-        if node in list(pns.keys()):
-            if pns[node]:
-                # If node is a pseudonode ...
-                color_map.append("blue")
-            else:
-                color_map.append("green")
-        else:
-            color_map.append("green")
+    color_map = [
+        "green" if not node in list(pns.keys()) else "blue" if pns[node] else "green"
+        for node in graph
+    ]
 
     # Edge labelling
     edge_labels = {
