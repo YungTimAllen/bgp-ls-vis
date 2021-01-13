@@ -16,9 +16,9 @@ def main():
     # Calling get_lsdb with param `filename` set will trigger loading from file instead of RPC
     # There are several sample topologies under /tests/
     # To dump a topology to yaml as we have done, yaml.dump(GoBGPQueryWrapper.dump())
-    lsdb = rpc.get_lsdb(filename="../tests/18-node-isis-w-bcast-segment.yaml")
-    # lsdb = rpc.get_lsdb(filename="../tests/solar_table.yaml")
-    # lsdb = rpc.get_lsdb(filename="../tests/junos_bgpls_nopsn.yml")
+    lsdb = rpc.get_lsdb(filename="../tests/bgp-ls_table_dumps/18-node-isis-w-bcast-segment.yaml")
+    #lsdb = rpc.get_lsdb(filename="../tests/bgp-ls_table_dumps/solar_table.yaml")
+    #lsdb = rpc.get_lsdb(filename="../tests/bgp-ls_table_dumps/junos_bgpls_nopsn.yml")
 
     graph = graphing.build_nx_from_lsdb(lsdb)
 
