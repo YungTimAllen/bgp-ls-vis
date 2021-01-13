@@ -112,8 +112,8 @@ def draw_pyplot_graph(graph: nx.Graph):
     Requires:
         import matplotlib.pyplot as plt
     """
-    # Pseudonode handling
-    # Create dict of key=node, value=pseudonode status (bool)
+    # Node colouring + Pseudonode handling
+    # Create dict keyed by node, value is pseudonode status (bool)
     pns = {v: d["pseudonode"] for _, v, d in graph.edges(data=True)}
     # color_map is an ordered list, where order is for `node in graph`
     # This is the same order nx.draw encounters nodes
@@ -127,7 +127,7 @@ def draw_pyplot_graph(graph: nx.Graph):
         (u, v): d["cost"] if d["cost"] > 0 else "" for u, v, d in graph.edges(data=True)
     }
 
-    # Colouring
+    # Edge Colouring
     edge_color = nx.get_edge_attributes(graph, "color").values()
 
     # Edge weight
