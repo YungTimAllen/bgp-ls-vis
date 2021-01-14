@@ -1,7 +1,6 @@
 """Graphing tools for bgp_ls_vis"""
 import networkx as nx
 import matplotlib.pyplot as plt
-import yaml
 
 
 def lsa_cost(lsa: dict) -> int:
@@ -51,7 +50,7 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
             graph.add_node(lsa["localNode"]["igpRouterId"])
 
     # new_name_map is a dict keyed by node (IGP RID) [oldname], where value is string for new-name
-    # Value is pulled from TLV137 if present in Node LSA
+    # - Value is pulled from TLV137 if present in Node LSA
     new_name_map = {}
     # node_lsa_attrs is a dict keyed by node (IGP RID) and value: a dict of arb. data
     # - node_lsa_attrs[node]['lsa'] is the raw LSA seen in the LSDB given from rpc.get_lsdb
