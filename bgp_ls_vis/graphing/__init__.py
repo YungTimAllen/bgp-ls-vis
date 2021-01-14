@@ -18,6 +18,21 @@ def lsa_cost(lsa: dict) -> int:
     return lsa["lsattribute"]["link"]["igpMetric"]
 
 
+def lsa_pseudonode(lsa: dict) -> bool:
+    """Checks given LSA for value pf pseudonode key if present
+
+    Args:
+        lsa: lsa dict object from lsdb (See: GoBGPQueryWrapper.build_nx_from_lsdb)
+
+    Returns:
+        bool value for pseudonode status inside lsa if present, else false
+    """
+    b_pseudonode = False
+    if "pseudonode" in list(lsa["localNode"].keys()):
+        b_pseudonode = lsa["localNode"]["pseudonode"]
+    return b_pseudonode
+
+
 def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
     """Given list of LSAs (LSDB), builds NetworkX Graph object
 
@@ -35,20 +50,20 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
         if lsa["type"] == "Node":
             graph.add_node(lsa["localNode"]["igpRouterId"])
 
-    # Dict keyed by oldname, where value is string for new-name
+    # new_name_map is a dict keyed by node (IGP RID) [oldname], where value is string for new-name
     # Value is pulled from TLV137 if present in Node LSA
     new_name_map = {}
     # node_lsa_attrs is a dict keyed by node (IGP RID) and value: a dict of arb. data
     # - node_lsa_attrs[node]['lsa'] is the raw LSA seen in the LSDB given from rpc.get_lsdb
     # - node_lsa_attrs[node]['prefixes'] is a list of all associated Prefix LSAs for this node (key)
-    node_lsa_attrs = {
-        node: {"lsa": None, "prefixes": [], "pseudonode": False} for node in graph.nodes
-    }
-    print(node_lsa_attrs)
+    node_lsa_attrs = {node: {"lsa": None, "prefixes": []} for node in graph.nodes}
+
     for lsa in lsdb:
+        igp_rid = lsa["localNode"]["igpRouterId"]
+
         if lsa["type"] == "Link":  # If LSA is an Edge ...
             graph.add_edge(
-                lsa["localNode"]["igpRouterId"],
+                igp_rid,
                 lsa["remoteNode"]["igpRouterId"],
                 cost=lsa_cost(lsa),
                 pseudonode="pseudonode" in lsa["remoteNode"].keys(),
@@ -56,37 +71,33 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
                 weight=1,
                 lsa=lsa,  # We store arbitrary data: the lsattrs of the NLRI
             )
+
         # Node type LSAs might have the node's true name (TLV137) under lsattrs
         # so we prep a rename map (Dict where key: old name, val: new name)
         # and call nx.relabel_nodes for the current graph, where `copy=false` renames in-place
         if lsa["type"] == "Node":
             if lsa["lsattribute"]["node"]:
-                # We check for existance of TLV137
+                # We check for existence of TLV137
                 if "name" in list(lsa["lsattribute"]["node"].keys()):
                     # and prep the new-name dict which is keyed by old name (IGP RID)
-                    old_name = lsa["localNode"]["igpRouterId"]
+                    old_name = igp_rid
                     new_name = lsa["lsattribute"]["node"]["name"]
                     new_name_map[old_name] = new_name
 
                 # Node stores pseudonode state under key localNode
                 # We prep this as arb. data to node_lsa_attrs
-                b_pseudonode = False
-                if "pseudonode" in list(lsa["localNode"].keys()):
-                    b_pseudonode = lsa["localNode"]["pseudonode"]
-                node_lsa_attrs[lsa["localNode"]["igpRouterId"]][
-                    "pseudonode"
-                ] = b_pseudonode
+                node_lsa_attrs[igp_rid]["pseudonode"] = lsa_pseudonode(lsa)
 
                 # Node type LSAs come with lsattrs, and we want to add those as arb. data
                 # to the nx.node in the nx.graph. e.g. Bandwidth stuff from the TED is here
-                node_lsa_attrs[lsa["localNode"]["igpRouterId"]]["lsa"] = lsa
+                node_lsa_attrs[igp_rid]["lsa"] = lsa
 
+        # Prefixes are associated with a node, which we initially build under IGP RID
+        # Whilst this will be renamed later (to the TLV137 value), it is currently still
+        # IGP RID until this initial loop ends. So, we can start assocaiting prefix LSAs
+        # to node objects.
         if lsa["type"] == "Prefix":
-            # Prefixes are associated with a node, which we initially build under IGP RID
-            # Whilst this will be renamed later (to the TLV137 value), it is currently still
-            # IGP RID until this initial loop ends. So, we can start assocaiting prefix LSAs
-            # to node objects.
-            node_lsa_attrs[lsa["localNode"]["igpRouterId"]]["prefixes"].append(lsa)
+            node_lsa_attrs[igp_rid]["prefixes"].append(lsa)
 
     # node_lsa_attrs is prepped with key:node, value:arbitrary data (k/v pairs)
     # nx.set_node_attributes
