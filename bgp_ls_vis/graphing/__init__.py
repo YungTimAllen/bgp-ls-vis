@@ -1,6 +1,7 @@
 """Graphing tools for bgp_ls_vis"""
 import networkx as nx
 import matplotlib.pyplot as plt
+import yaml
 
 
 def lsa_cost(lsa: dict) -> int:
@@ -28,33 +29,73 @@ def build_nx_from_lsdb(lsdb: list) -> nx.MultiDiGraph:
     """
     graph = nx.MultiDiGraph()
 
+    # First iteration over LSDB initialises all nodes to the nx.graph object
+    # Nodes are keyed by igpRouterId - this is renamed to TLV137 values if known later
     for lsa in lsdb:
         if lsa["type"] == "Node":
-            b_pseudonode = False
-            if "pseudonode" in list(lsa["localNode"].keys()):
-                b_pseudonode = lsa["localNode"]["pseudonode"]
-            graph.add_node(lsa["localNode"]["igpRouterId"], pseudonode=b_pseudonode)
+            graph.add_node(lsa["localNode"]["igpRouterId"])
 
+    # Dict keyed by oldname, where value is string for new-name
+    # Value is pulled from TLV137 if present in Node LSA
+    new_name_map = {}
+    # node_lsa_attrs is a dict keyed by node (IGP RID) and value: a dict of arb. data
+    # - node_lsa_attrs[node]['lsa'] is the raw LSA seen in the LSDB given from rpc.get_lsdb
+    # - node_lsa_attrs[node]['prefixes'] is a list of all associated Prefix LSAs for this node (key)
+    node_lsa_attrs = {
+        node: {"lsa": None, "prefixes": [], "pseudonode": False} for node in graph.nodes
+    }
+    print(node_lsa_attrs)
     for lsa in lsdb:
-        if lsa["type"] == "Link":
+        if lsa["type"] == "Link":  # If LSA is an Edge ...
             graph.add_edge(
                 lsa["localNode"]["igpRouterId"],
                 lsa["remoteNode"]["igpRouterId"],
                 cost=lsa_cost(lsa),
                 pseudonode="pseudonode" in lsa["remoteNode"].keys(),
+                color="black",
+                weight=1,
+                lsa=lsa,  # We store arbitrary data: the lsattrs of the NLRI
             )
-
-    # Node type LSAs might have the node's true name (TLV137) under lsattrs
-    # so we prep a rename map (Dict where key: old name, val: new name)
-    # and call nx.relabel_nodes for the current graph, where `copy=false` renames in-place
-    new_name_map = {}
-    for lsa in lsdb:
+        # Node type LSAs might have the node's true name (TLV137) under lsattrs
+        # so we prep a rename map (Dict where key: old name, val: new name)
+        # and call nx.relabel_nodes for the current graph, where `copy=false` renames in-place
         if lsa["type"] == "Node":
             if lsa["lsattribute"]["node"]:
+                # We check for existance of TLV137
                 if "name" in list(lsa["lsattribute"]["node"].keys()):
+                    # and prep the new-name dict which is keyed by old name (IGP RID)
                     old_name = lsa["localNode"]["igpRouterId"]
                     new_name = lsa["lsattribute"]["node"]["name"]
                     new_name_map[old_name] = new_name
+
+                # Node stores pseudonode state under key localNode
+                # We prep this as arb. data to node_lsa_attrs
+                b_pseudonode = False
+                if "pseudonode" in list(lsa["localNode"].keys()):
+                    b_pseudonode = lsa["localNode"]["pseudonode"]
+                node_lsa_attrs[lsa["localNode"]["igpRouterId"]][
+                    "pseudonode"
+                ] = b_pseudonode
+
+                # Node type LSAs come with lsattrs, and we want to add those as arb. data
+                # to the nx.node in the nx.graph. e.g. Bandwidth stuff from the TED is here
+                node_lsa_attrs[lsa["localNode"]["igpRouterId"]]["lsa"] = lsa
+
+        if lsa["type"] == "Prefix":
+            # Prefixes are associated with a node, which we initially build under IGP RID
+            # Whilst this will be renamed later (to the TLV137 value), it is currently still
+            # IGP RID until this initial loop ends. So, we can start assocaiting prefix LSAs
+            # to node objects.
+            node_lsa_attrs[lsa["localNode"]["igpRouterId"]]["prefixes"].append(lsa)
+
+    # node_lsa_attrs is prepped with key:node, value:arbitrary data (k/v pairs)
+    # nx.set_node_attributes
+    # """If you provide a dictionary of dictionaries as the second argument, the outer dictionary
+    #    is assumed to be keyed by node to an inner dictionary of node attributes for that node:"""
+    # https://networkx.org/documentation/stable/reference/generated/networkx.classes.function.set_node_attributes.html
+    nx.set_node_attributes(graph, node_lsa_attrs)
+
+    # Node relabel is called AFTER the networkx graph is built from the LSDB
     nx.relabel_nodes(graph, new_name_map, copy=False)
 
     return graph
@@ -71,27 +112,37 @@ def draw_pyplot_graph(graph: nx.Graph):
     Requires:
         import matplotlib.pyplot as plt
     """
-    # Create dict of key=node, value=pseudonode status (bool)
+    # Node colouring + Pseudonode handling
+    # Create dict keyed by node, value is pseudonode status (bool)
     pns = {v: d["pseudonode"] for _, v, d in graph.edges(data=True)}
     # color_map is an ordered list, where order is for `node in graph`
     # This is the same order nx.draw encounters nodes
-    color_map = []
-    for node in graph:
-        if node in list(pns.keys()):
-            if pns[node]:
-                # If node is a pseudonode ...
-                color_map.append("blue")
-            else:
-                color_map.append("green")
-        else:
-            color_map.append("green")
+    color_map = [
+        "green" if not node in list(pns.keys()) else "blue" if pns[node] else "green"
+        for node in graph
+    ]
 
+    # Edge labelling
     edge_labels = {
         (u, v): d["cost"] if d["cost"] > 0 else "" for u, v, d in graph.edges(data=True)
     }
 
+    # Edge Colouring
+    edge_color = nx.get_edge_attributes(graph, "color").values()
+
+    # Edge weight
+    edge_weight = nx.get_edge_attributes(graph, "weight").values()
+
     pos = nx.spring_layout(graph)
-    nx.draw(graph, pos, node_color=color_map, with_labels=True, font_size=7)
+    nx.draw(
+        graph,
+        pos,
+        node_color=color_map,
+        edge_color=edge_color,
+        width=list(edge_weight),
+        with_labels=True,
+        font_size=7,
+    )
     nx.draw_networkx_edge_labels(
         graph, pos, edge_labels=edge_labels, label_pos=0.3, font_size=7
     )
