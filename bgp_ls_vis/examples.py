@@ -6,18 +6,17 @@ import bgp_ls_vis.dashboard
 
 def main():
     """Example usages of bgp_ls_vis package"""
-    # example1()
+    example1()
     # example2()
-    example3()
+    # example3()
 
 
 def example1():
     """Running the Dash (webgui) frontend"""
 
     # Prep RPC connection params to GoBGP instance
+    # and create new connection object (GoBGPQueryWrapper)
     gobgp_target = {"target_ipv4_address": "172.20.10.2", "target_rpc_port": 50051}
-
-    # Create new connection object (GoBGPQueryWrapper)
     rpc = bgp_ls_vis.proto.GoBGPQueryWrapper(**gobgp_target)
 
     # Use the RPC connection to push an RPC query for the contents of the BGP-LS table
@@ -25,8 +24,11 @@ def example1():
     # - get_lsdb() sends the RPC request and filters the LSDB to be "nice" autonomously
     lsdb = rpc.get_lsdb()
 
+    # build_nx_from_lsdb will create a NetworkX graph object from the LSDB given by get_lsdb()
+    graph = bgp_ls_vis.graphing.build_nx_from_lsdb(lsdb)
+
     # Call dashboard package
-    bgp_ls_vis.dashboard.main(rpc, lsdb)
+    bgp_ls_vis.dashboard.main(nx_graph=graph)
 
 
 def example2():
