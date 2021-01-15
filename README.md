@@ -37,7 +37,7 @@ graphing.draw_pyplot_graph(graph)
 * [NetworkX](https://networkx.org/) + matplotlib (`graphing.draw_pyplot_graph`)
 
 ```buildoutcfg
-   pip3 install networkx matplotlib pygraphviz
+   pip3 install networkx matplotlib
 ```
 
 To get pygraphviz working ...
