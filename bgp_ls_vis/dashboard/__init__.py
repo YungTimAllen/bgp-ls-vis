@@ -1,5 +1,5 @@
+"""Web-frontend dashboard for Dash/Flask graphing"""
 import yaml
-from proto import GoBGPQueryWrapper
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -7,17 +7,18 @@ import dash_cytoscape as cyto
 from dash.dependencies import Input, Output
 import plotly.express as px
 from pprint import pprint
-import graphing
 import plotly.graph_objects as go
 
+# Project internal imports
+from ..proto import GoBGPQueryWrapper
+from ..graphing import *
 
-def main():
+
+def main(rpc: GoBGPQueryWrapper):
     """First method called when ran as script"""
-    rpc = GoBGPQueryWrapper("192.168.242.132", "50051")
-
     lsdb = rpc.get_lsdb()
 
-    nx_graph = graphing.build_nx_from_lsdb(lsdb)
+    nx_graph = build_nx_from_lsdb(lsdb)
 
     elements = []
 
@@ -51,11 +52,11 @@ def main():
                 },
                 style={
                     "width": "100%",
-                    'height': '100%',
-                    'position': 'absolute',
-                    'left': 0,
-                    'top': 0,
-                    'z-index': 999,
+                    "height": "100%",
+                    "position": "absolute",
+                    "left": 0,
+                    "top": 0,
+                    "z-index": 999,
                 },
                 stylesheet=[
                     {
@@ -73,7 +74,7 @@ def main():
                         "style": {
                             "source-label": "data(cost)",
                             "source-text-offset": 45,
-                            "width": "2%"
+                            "width": "2%",
                         },
                     },
                 ],
@@ -82,7 +83,3 @@ def main():
     )
 
     app.run_server(debug=True)
-
-
-if __name__ == "__main__":
-    main()
