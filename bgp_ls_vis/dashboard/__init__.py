@@ -1,4 +1,7 @@
 """Web-frontend dashboard for Dash/Flask graphing"""
+from pprint import pprint
+
+import networkx
 import yaml
 import dash
 import dash_core_components as dcc
@@ -6,7 +9,6 @@ import dash_html_components as html
 import dash_cytoscape as cyto
 from dash.dependencies import Input, Output
 import plotly.express as px
-from pprint import pprint
 import plotly.graph_objects as go
 
 # Project internal imports
@@ -14,12 +16,20 @@ from ..proto import GoBGPQueryWrapper
 from ..graphing import *
 
 
-def main(rpc: GoBGPQueryWrapper):
-    """First method called when ran as script"""
-    lsdb = rpc.get_lsdb()
+def main(
+    rpc: GoBGPQueryWrapper = None,
+    nx_graph: networkx.Graph = None,
+    host="127.0.0.1",
+    port=8050,
+):
+    """Builds dash frontend and runs
 
-    nx_graph = build_nx_from_lsdb(lsdb)
-
+    Args:
+        rpc: proto.GoBGPQueryWrapper object - used for callback when eventually implemented
+        nx_graph: NetworkX Graph object, given by graphing.build_nx_from_lsdb
+        host: Local IPv4 address on which to serve the Dash service
+        port: Local TCP port on which to serve the Dash service
+    """
     elements = []
 
     for node in nx_graph.nodes():
@@ -82,4 +92,4 @@ def main(rpc: GoBGPQueryWrapper):
         ]
     )
 
-    app.run_server(debug=True)
+    app.run_server(debug=True, host=host, port=port)
