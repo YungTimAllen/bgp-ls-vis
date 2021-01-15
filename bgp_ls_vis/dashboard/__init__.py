@@ -14,10 +14,16 @@ from ..proto import GoBGPQueryWrapper
 from ..graphing import *
 
 
-def main(rpc: GoBGPQueryWrapper):
-    """First method called when ran as script"""
-    lsdb = rpc.get_lsdb()
+def main(rpc: GoBGPQueryWrapper, lsdb: dict):
+    """First method called when ran as script
 
+    Args:
+        rpc:
+        lsdb:
+
+    Returns:
+
+    """
     nx_graph = build_nx_from_lsdb(lsdb)
 
     elements = []
